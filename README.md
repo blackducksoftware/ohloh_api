@@ -1,79 +1,190 @@
-# Ohloh API Examples #
-Some basic [Ohloh](http://www.ohloh.net) API samples to help you get started. For information on the Ohloh API, please see the [documentation](http://meta.ohloh.net/getting_started). The Ohloh API has some restrictions, so please review the complete [Terms of Use](http://meta.ohloh.net/terms-2) before you begin.
+# Ohloh API Documentation
 
-### Examples are available in: ###
-* BASH
+## Welcome
 
-  Uses `curl` to pull an [Account](http://meta.ohloh.net/referenceaccount) from Ohloh and `openssl` to create MD5 hex of the email address. A simple sed hack parses the XML response into name:value pairs. The example demonstrates data retrieval using email address lookup. Pass your API key and the email address of the Account you are requsting as parameters to the script:
+The Ohloh API is a free, REST-based programming interface to the Ohloh open source directory. You can use the Ohloh API to create your own applications and web services based on Ohloh data.
 
-  `./account_sample.sh YOUR_API_KEY_HERE rluckey@blackducksoftware.com`
+## Getting Help
 
-  The script isn’t very robust — `sed` is not the world’s best XML parser — but it does return a non-zero exit code if the record is not found or some other problem occurs.
+This page contains important summary information to help you get started. In-depth online documentation is available, linked by the table of contents below.
 
-* Ruby
+Some sample code can be found on the [Examples](examples.md) page. For questions not covered in the documenation, the [Ohloh API forum](http://www.ohloh.net/forums/3492) can provide additional help.
 
-  Performs the same email-based account lookup, but uses more rigorous error handling and parsing to create a structured XML document object. Using the `REXML` library, you can build a more robust interface to the Ohloh API.
+Send bug reports to info@ohloh.net.
 
-  Execute the script by passing your API key and an email address as parameters:
+## Table of Contents
++ [Lookup By Email](email_lookup.md)
++ [Using OAuth with the Ohloh API](oauth.md)
++ [Examples](examples.md)
++ Ohloh API Reference
+    - [Account](reference/account.md)
+    - [Account News](reference/news.md)
+    - [ActivityFact](reference/activity_fact.md)
+    - [Analysis](reference/analysis.md)
+    - [ContributorFact](reference/contributor_fact.md)
+    - [ContributorLanguageFact](reference/contributor_language_fact.md)
+    - [Enlistment](reference/enlistment.md)
+    - [Factoid](reference/factoid.md)
+    - [Kudo](reference/kudo.md)
+    - [KudoScore](reference/kudo_score.md)
+    - [Language](reference/language.md)
+    - [Message](reference/message.md)
+    - [Position](reference/position.md)
+    - [Project](reference/project.md)
+    - [Repository](reference/repository.md)
+    - [SizeFact](reference/size_fact.md)
+    - [Stack](reference/stack.md)
+    - [StackEntry](reference/stack_entry.md)
++ [API Use Agreement](http://meta.ohloh.net/terms-2/)
++ [Apply for an API Key](http://www.ohloh.com/accounts/me/api_keys/new)
++ [API Key Status](http://www.ohloh.net/accounts/me/api_keys)
 
-  `ruby account_sample.rb YOUR_API_KEY_HERE rluckey@blackducksoftware.com`
+## Terms of Use
 
-* Python
+The Ohloh API has some restrictions. Please review the complete [Terms of Use](http://meta.ohloh.net/terms-2/) before you begin.
 
-  Performs a similar account lookup on Ohloh. It requires `urllib`, `hashlib` and `elementtree`.
+We ask that you cite Ohloh in publications that use our data. Please include a link to http://www.ohloh.net on your web pages.
 
-  Execute the script by passing your API key and an email address as parameters:
+Our terms require you to provide a link back to our site. While you’re free to use any method you’d prefer, we’ve provided this small button for your convenience: ![Ohloh Button](https://www.ohloh.net/images/badges/mini.gif)
 
-  `./account_sample.py YOUR_API_KEY_HERE rluckey@blackducksoftware.com`
+We recommend linking to our home page. The following html will link the small badge to our home page:
 
-  Many thanks to [Thijs Triemstra](http://www.ohloh.net/accounts/3953) for contributing this sample.
+```html
+<a href ="http://www.ohloh.net"><img src="http://www.ohloh.net/images/badges/mini.gif" width="80" height="15" /></a>
+```
 
-* Perl
+## API Key
 
-  Performs a similar account lookup on Ohloh. It requires the `LWP::Simple`, `Digest::MD5`, and `XML::Simple` libraries.
+Before you can access the Ohloh API, you must [register your application](https://www.ohloh.net/accounts/me/api_keys/new) and obtain an API key. Bandwidth will initially be limited to 1,000 requests per API key per day.
 
-  Execute the script by passing your API key and an email address as parameters:
+An API Key should be unique to each application that accesses the Ohloh API. You can register up to five applications.
 
-  `./account_sample.pl YOUR_API_KEY_HERE rluckey@blackducksoftware.com`
+It is important not to share API keys. In order to access or modify account data, your application must be granted permission by an individual Ohloh account holder. This permission is granted on a per-key basis.
 
-  Many thanks to [Yanick Champoux](http://www.ohloh.net/accounts/12933) for contributing this sample.
+You can [register a new application](https://www.ohloh.net/accounts/me/api_keys/new) or [view the status](http://www.ohloh.net/accounts/me/api_keys) of your existing applications online.
 
-* Java
+If you have special requirements for additional keys, or if you are interested in building a large-scale application, please contact us at info@ohloh.net.
 
-  Uses Java’s networking capabilities to pull an [Account](http://www.meta.ohloh.net/referenceaccount) from Ohloh. It demonstrates how to generate an MD5 hash of an email address to use as a lookup key, then uses DOM to parse the XML response.
+## OAuth Impersonation
 
-  Pass your API key and the email address of the Account you are requesting as parameters:
+The standard Ohloh API allows read-only access to Ohloh data.
 
-  `javac ApiExample.java`
+Using OAuth, you can impersonate an Ohloh account while accessing the Ohloh API. This enables you to write to the Ohloh database, and also to access or modify private account information. You must first be granted permission to do this by an Ohloh account holder.
 
-  `java ApiExample YOUR_API_KEY_HERE rluckey@blackducksoftware.com`
+You can read more at [Using OAuth with the Ohloh API](oauth.md).
 
-* C++
+## Forming a Request
 
-  The C++ example is a bit more involved, because it must include code for networking, MD5 hashing, and XML parsing. The example includes source for some small libraries to create a self-contained program.
+The Ohloh API returns XML-formatted data in response to HTTP GET requests.
 
-  The code was written for Visual Studio 2005, but it also compiles and runs on Mac OS X, and should work on Linux. Let us know if you encounter trouble on your platform.
+The design concept is that for each web page on Ohloh, there may be an equivalent XML-formatted version of the page. Currently, only a small subset of the Ohloh site is available as XML, but more data will become available over time.
 
-  To build with Visual Studio 2005:
-  * Open solution file `ApiExample.cpp/build/vs2005/OhlohApiExample.sln`
-  * Right-click the solution and choose *Build*.
+You must do three things to receive an XML-formatted response:
 
-  To build on Linux or Mac OS X, *cd to ApiExample.cpp* and run the build script:
+1. Append a `.xml` extension to the basic URL. For example, instead of `http://www.ohloh.net/projects/1`, which returns an HTML page, you would request `http://www.ohloh.net/projects/1.xml`.
+2. Provide your API Key as an HTTP parameter. Your request will be forbidden without a valid `api_key`.
 
-  `./compile.sh`
+For example, to view the project with ID=1 as XML, using an example API key, the complete URL would be:
 
-  You can then run the executable called `ApiExample` and pass it your API key and an email address:
+```
+http://www.ohloh.net/projects/1.xml?api_key=01234567890123456789 
+```
 
-  `./bin/ApiExample YOUR_API_KEY_HERE rluckey@blackducksoftware.com`
+For the sake of brevity, the `api_key` parameter will be omitted from the examples in this documentation. Remember to always include it in your actual queries.
 
-  Many thanks to [Lars ‘Levia’ Wesselius](http://www.ohloh.net/accounts/739) for providing the sample code in both C++ and Java!
+Note that the Ohloh API previously required the use of a version parameter `v`. This is no longer required, and will be ignored.
 
-* PHP
+## XML Response Format
 
-  Paul Scott has created a full-featured PHP class for accessing the Ohloh API, complete with documentation. You can find it at the [PHP Classes](http://www.phpclasses.org/browse/package/4261.html) website.
+A sample response to a project request might be:
 
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <status>success</status>
+  <result>
+    <project>
+      <id>1</id>
+      <name>Subversion</name>
+      <created_at>2006-10-10T15:51:31Z</created_at>
+      <updated_at>2007-08-22T17:31:17Z</updated_at>
+      <description>Subversion has rapidly become the version control standard....</description>
+      <homepage_url>http://subversion.tigris.org/</homepage_url>
+      <download_url>http://subversion.tigris.org/project_packages.html</download_url>
+      <irc_url></irc_url>
+      <stack_count>1096</stack_count>
+      <analysis_id>51898</analysis_id>
+      <analysis>
+        <id>51898</id>
+        <project_id>1</project_id>
+        <updated_at>2007-07-12T12:21:11Z</updated_at>
+        <logged_at>2007-07-12T12:18:54Z</logged_at>
+        <min_month>2001-08-01T00:00:00Z</min_month>
+        <max_month>2007-07-01T00:00:00Z</max_month>
+        <twelve_month_contributor_count>55</twelve_month_contributor_count>
+        <total_code_lines>319283</total_code_lines>
+        <main_language_id>7</main_language_id>
+        <main_language_name>C/C++</main_language_name>
+      </analysis>
+    </project>
+  </result>
+</response>
+```
 
-Your feedback on these examples will benefit everyone, and we’re eager for input on improvements.   
-We’d also appreciate help translating the samples into more languages.
+All XML returned from the Ohloh API will be contained within a root element called `<response>`, which will always contain a `<status>` element.
 
-Please don’t hesitate to contact us at info@ohloh.net.
+The `<status>` element will contain either `success` or `failed`.
+
+When the `<status>` value is `success`, the HTTP response code will be `200`, and the `<result>` element contains the data you requested.
+
+If the `status` is `failed`, then the HTTP response code will be set appropriately (usually Bad Request or Not Found), and an `<error>` element will be present containing human-readable help text. For example:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <status>failed</status>
+  <error>A valid api_key is required to access this URL.</error>
+</response>
+```
+
+Details about this project response can be found in the Ohloh API Reference [project page](reference/project.md).
+
+## Collection Requests
+
+### Collection Request Parameters
+
++ __query__ - Results will be filtered by the provided string. Only items that contain the query string in their names or descriptions will be returned. Filtering is case insenstive. Only alphanumeric characters are accepted. All non-alphanumeric characters will be replaced by spaces. Filtering is not available on all API methods, and the searched text depends on the type of object requested. Check the reference documentation for specifics.
++ __sort__ - Controls the sort order of the returned results. Typical supported values are name, created_at, and updated_at. The specific sort options available depend on the type of object requested, so check to the reference documentation for specifics. _API does not support reverse sorting_.
++ __page__ - In most cases, the Ohloh API returns at most 25 items per request. Pass this parameter to request subsequent items beyond the first page. This parameter is _one-based_, with a default value of 1. If you pass a value outside the range of available pages, you will receive the first page.
+
+For example, to get the second page of projects containing “java” or “Java” in their titles, descriptions, or tags, you would request:
+
+```
+GET http://www.ohloh.net/projects.xml?query=java&page=2 
+```
+
+### Collection Response XML Format
+
+Some results will contain a collection of values. When this happens, the `<response>` element will contain some additional elements:
+
++ __items_returned__ - The number of items returned in this response.
++ __items_available__ - The total number of database items matching the query, including those already returned.
++ __first_item_position__ - The zero-based index of the first item returned
+
+For example, the response to `http://www.ohloh.net/projects.xml` might begin:
+
+```xml
+<response>
+  <status>success</status>
+  <items_returned>25</items_returned>
+  <items_available>7056</items_available>
+  <first_item_position>0</first_item_position>
+  <result>
+    <project>
+      <id>9</id>
+      <name>Mozilla Firefox</name>
+      ....
+```
+
+- - -
+Copyright 2013 Black Duck Software, Inc. Unless otherwise marked, this work is licensed under a [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/).
