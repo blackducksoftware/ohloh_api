@@ -35,8 +35,6 @@ ContributorFacts only exist after Ohloh has downloaded and analyzed the project 
     The total number of calendar months in which this contributor made at least one commit. Note that this is not simply the number of months between `first_commit_time` and `last_commit_time`: months in which there was no activity for this contributor are not counted.
 + __commits__
     The total number of commits made by this contributor.
-+ __median_commits__
-    Considering only months in which this contributor made at least one commit, this is the median number of commits in a single month by this contributor.
 + __contributor_language_facts__
     A collection of [ContributorLanguageFacts](/reference/contributor_language_fact.md) may be included here, covering statistics in individual [Languages](/reference/language.md). This collection is only present when ContributorFacts are queried individually.
 

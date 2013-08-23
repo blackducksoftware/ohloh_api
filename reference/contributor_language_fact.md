@@ -28,8 +28,6 @@ ContributorLanguageFacts only exist after Ohloh has downloaded and analyzed the 
     The total number of calendar months in which this contributor made at least one commit using this Language. Months in which there was no activity in this Language for this contributor are not counted.
 + __commits__
     The total number of commits made in this Language by this contributor.
-+ __median_commits__
-    Considering only months in which this contributor made at least one commit in this Language, this is the median number of commits in a single month in this Language by this contributor. 
 
 ### Collection URL
 To get a list of all ContributorLanguageFacts for a particular contributor, based on the lastest Analysis for a Project:

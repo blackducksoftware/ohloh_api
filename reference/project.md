@@ -22,12 +22,14 @@ A Project represents a collection of source code, documentation, and web sites t
     An url to the project’s 64×64 pixels logo image.
 + __small_logo_url__
     An url to the project’s 32×32 pixels logo image.
-+ __stack_count__
-    The number of [Stacks](stack.md) currently containing this project. Higher stack counts indicate more popular projects.
++ __users_count__
+    The number of users currently using this project.
 + __average_rating__
     A floating point value from 1.0 to 5.0, representing the average value of all user ratings. 1.0 is the worst possible rating and 5.0 is the highest possible rating. Will be null if no users have rated this project.
 + __rating_count__
     The number of users who have rated this project.
++ __review_count__
+    The number of users who have reviewed this project.
 + __analysis_id__
     The unique ID of the current best [Analysis](analysis.md) for this project. If the project has never been analyzed, this element will be empty.
 + __analysis__
@@ -38,6 +40,7 @@ A Project represents a collection of source code, documentation, and web sites t
     The url to the current Projects details page on Ohloh.
 + __factoids__
     The factoids for the current Analysis will be included under this node.
+
 ```xml
 <factoids>
     <factoid type="FactoidTeamSizeVeryLarge">Very large, active development team</factoid>
@@ -45,6 +48,17 @@ A Project represents a collection of source code, documentation, and web sites t
     <factoid type="FactoidActivityIncreasing">Increasing year-over-year development activity</factoid>
     <factoid type="FactoidCommentsLow">Few source code comments</factoid>
 </factoids>
+```
+
++ __tags__
+    The tags for the current project will be included under this node.
+
+```xml
+<tags>
+    <tag>ruby</factoid>
+    <tag>gem</tag>
+    <tag>web</tag>
+</tags>
 ```
 
 + __language__
@@ -60,12 +74,30 @@ A Project represents a collection of source code, documentation, and web sites t
 
 ```xml
 <languages graph_url="http://ohloh.net/p/firefox/analyses/9239902/languages.png">
-    <language color="F35F1F" percentage="40" id="44">C++</language>
-    <language color="FF8F00" percentage="19" id="42">C</language>
-    <language color="A4007E" percentage="14" id="6">JavaScript</language>
-    <language color="000000" percentage="27" id="">28 Other</language>
+  <language color="F35F1F" percentage="40" id="44">C++</language>
+  <language color="FF8F00" percentage="19" id="42">C</language>
+  <language color="A4007E" percentage="14" id="6">JavaScript</language>
+  <language color="000000" percentage="27" id="">28 Other</language>
 </languages>
 ```
+
++ __licenses__
+    The Licenses for the current project will be included under this node.
+    - __name__
+    Full Name of the License
+    - __nicename__
+    A human-friendly name of the License
+
+
+```xml
+  <licenses>
+    <license>
+      <name>mit</name>
+      <nice_name>MIT License</nice_name>
+    </license>
+  </licenses>
+```
+
 
 ### URL
 To get a single Project, including its current best Analysis:
