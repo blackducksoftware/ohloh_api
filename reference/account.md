@@ -9,6 +9,12 @@ The unique ID for the Account.
 + __name__
     The public name for this Account.
 
++ __about__
+    A short description about this account.
+
++ __login__
+    The Login handle for this account.
+
 + __created_at__
     The time at which this Account was originally created on Ohloh.
 
@@ -17,6 +23,15 @@ The unique ID for the Account.
 
 + __homepage_url__
     An optional URL to a member’s home page, such as a blog.
+
++ __twitter_account__
+    An optional Twitter handle for this account.
+
++ __url__
+    A URL, returning details about this account in XML format.
+
++ __html_url__
+    A URL to the profile's Home page for this account.
 
 + __avatar_url__
     A URL to the profile image displayed on Ohloh pages. Currently, this is an URL to the Gravatar free image hosting service, which will resolves to a default image if the account holder is not a Gravatar member. Images are 80×80 by default.
@@ -53,10 +68,6 @@ If this account has a KudoScore, it will appear here. New accounts may not have 
     The Ohloh code name for this language, e.g. C# will be csharp and C++ will be cpp.
     - __experience_months__
     The total number of months that Ohloh has computed as experience in this language for the current Account.
-    - __median_monthly_commits__
-    The median number of commits made (when averaged over the total months of experience) by the current Account that contained code in the current Language.
-    - __median_monthly_lines_changed__
-    The median number of lines changed (when averaged over the total months of experience) by the current Account that contained code in the current Language.
     - __total_commits__
     The total number of commits made by the current Account that contained code in the current Language.
     - __total_lines_changed__
@@ -69,8 +80,6 @@ If this account has a KudoScore, it will appear here. New accounts may not have 
     <language color="A4007E">
         <name>javascript</name>
         <experience_months>24</experience_months>
-        <median_monthly_commits>3</median_monthly_commits>
-        <median_monthly_lines_changed>856</median_monthly_lines_changed>
         <total_commits>116</total_commits>
         <total_lines_changed>563,931</total_lines_changed>
         <comment_ratio>23.4%</comment_ratio>
@@ -78,8 +87,6 @@ If this account has a KudoScore, it will appear here. New accounts may not have 
     <language color="FF1A00">
         <name>css</name>
         <experience_months>20</experience_months>
-        <median_monthly_commits>2</median_monthly_commits>
-        <median_monthly_lines_changed>488</median_monthly_lines_changed>
         <total_commits>83</total_commits>
         <total_lines_changed>74,705</total_lines_changed>
         <comment_ratio>4.3%</comment_ratio>
@@ -87,8 +94,6 @@ If this account has a KudoScore, it will appear here. New accounts may not have 
     <language color="47A400">
         <name>html</name>
         <experience_months>19</experience_months>
-        <median_monthly_commits>2</median_monthly_commits>
-        <median_monthly_lines_changed>237</median_monthly_lines_changed>
         <total_commits>62</total_commits>
         <total_lines_changed>27,875</total_lines_changed>
         <comment_ratio>20.5%</comment_ratio>

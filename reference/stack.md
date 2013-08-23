@@ -8,6 +8,10 @@ A Stack contains zero or more [StackEntries](stack_entry.md), each of which link
 
 + __id__
     The unique ID for the Stack.
++ __title__
+    The name of the Stack.
++ __description__
+    A short description about this Stack.
 + __updated_at__
     The most recent time at which any Projects were added to or removed from this Stack.
 + __project_count__
