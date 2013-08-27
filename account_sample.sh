@@ -1,9 +1,9 @@
 #!/bin/sh
 
 # This is an example of using the Ohloh API from Bash.
-# Detailed information can be found at the Ohloh website:
+# Detailed information can be found on GitHub:
 #
-#     http://meta.ohloh.net/getting_started
+#     https://github.com/blackducksw/ohloh_api
 #
 
 # This example retrieves basic Ohloh account information
