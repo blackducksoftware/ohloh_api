@@ -3,9 +3,9 @@
 """
 This is an example of using the Ohloh API from Python.
 
-Detailed information can be found at the Ohloh website:
+Detailed information can be found on GitHub:
 
-     http://meta.ohloh.net/getting_started
+     https://github.com/blackducksw/ohloh_api
 
 This example uses the ElementTree library for XML parsing
 (included in Python 2.5 and newer):
