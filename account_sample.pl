@@ -16,7 +16,7 @@ This is a small example of how to use the Ohloh API from Perl,
 mimicking the Ruby example - account_sample.rb
 
 Detailed information about the Ohloh API can be found at
-http://meta.ohloh.net/getting_started.
+https://github.com/blackducksw/ohloh_api
 
 The script takes an API key and the email address of a developer
 registered on Ohloh as parameters, and prints out all the

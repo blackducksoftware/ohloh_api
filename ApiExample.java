@@ -2,7 +2,7 @@
     This is an example of using the Ohloh API from Java.
     Detailed information can be found at the Ohloh website:
 
-     http://meta.ohloh.net/getting_started
+    https://github.com/blackducksw/ohloh_api
 
     This examples retrieves a account and simply shows the name associated.
 
