@@ -1,5 +1,6 @@
 #include "HTTPDownload.h"
 
+#include <cstdlib>
 #include <iostream>
 #include <sstream>
 #include <map>
