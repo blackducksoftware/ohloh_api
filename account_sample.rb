@@ -6,7 +6,7 @@ require 'digest/md5'
 # This is an example of using the Ohloh API from Ruby.
 # Detailed information can be found at the Ohloh website:
 #
-#     http://meta.ohloh.net/getting_started
+#     https://github.com/blackducksw/ohloh_api
 #
 # This example uses the REXML library for XML parsing:
 #
