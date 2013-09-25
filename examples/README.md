@@ -4,7 +4,7 @@ Some basic [Ohloh](http://www.ohloh.net) API samples to help you get started. Fo
 ### Examples are available in: ###
 * BASH
 
-  Uses `curl` to pull an [Account](http://meta.ohloh.net/referenceaccount) from Ohloh and `openssl` to create MD5 hex of the email address. A simple sed hack parses the XML response into name:value pairs. The example demonstrates data retrieval using email address lookup. Pass your API key and the email address of the Account you are requsting as parameters to the script:
+  Uses `curl` to pull an [Account](/reference/account.md) from Ohloh and `openssl` to create MD5 hex of the email address. A simple sed hack parses the XML response into name:value pairs. The example demonstrates data retrieval using email address lookup. Pass your API key and the email address of the Account you are requsting as parameters to the script:
 
   `./account_sample.sh YOUR_API_KEY_HERE rluckey@blackducksoftware.com`
 
@@ -40,7 +40,7 @@ Some basic [Ohloh](http://www.ohloh.net) API samples to help you get started. Fo
 
 * Java
 
-  Uses Java’s networking capabilities to pull an [Account](http://www.meta.ohloh.net/referenceaccount) from Ohloh. It demonstrates how to generate an MD5 hash of an email address to use as a lookup key, then uses DOM to parse the XML response.
+  Uses Java’s networking capabilities to pull an [Account](/reference/account.md) from Ohloh. It demonstrates how to generate an MD5 hash of an email address to use as a lookup key, then uses DOM to parse the XML response.
 
   Pass your API key and the email address of the Account you are requesting as parameters:
 
