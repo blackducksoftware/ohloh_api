@@ -8,14 +8,14 @@ The Ohloh API is a free, REST-based programming interface to the Ohloh open sour
 
 This page contains important summary information to help you get started. In-depth online documentation is available, linked by the table of contents below.
 
-Some sample code can be found on the [Examples](examples.md) page. For questions not covered in the documenation, the [Ohloh API forum](http://www.ohloh.net/forums/3492) can provide additional help.
+Some sample code can be found on the [Examples](examples/) page. For questions not covered in the documenation, the [Ohloh API forum](http://www.ohloh.net/forums/3492) can provide additional help.
 
 Send bug reports to info@ohloh.net.
 
 ## Table of Contents
 + [Lookup By Email](email_lookup.md)
-+ [Using OAuth with the Ohloh API](oauth.md)
-+ [Examples](examples.md)
++ [Using OAuth with the Ohloh API](examples/oauth)
++ [Examples](examples/)
 + Ohloh API Reference
     - [Account](reference/account.md)
     - [Account News](reference/news.md)
