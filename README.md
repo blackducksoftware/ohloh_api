@@ -71,7 +71,7 @@ The standard Ohloh API allows read-only access to Ohloh data.
 
 Using OAuth, you can impersonate an Ohloh account while accessing the Ohloh API. This enables you to write to the Ohloh database, and also to access or modify private account information. You must first be granted permission to do this by an Ohloh account holder.
 
-You can read more at [Using OAuth with the Ohloh API](oauth.md).
+You can read more at [Using OAuth with the Ohloh API](examples/oauth#using-oauth-with-the-ohloh-api).
 
 ## Forming a Request
 
@@ -87,7 +87,7 @@ You must do three things to receive an XML-formatted response:
 For example, to view the project with ID=1 as XML, using an example API key, the complete URL would be:
 
 ```
-http://www.ohloh.net/projects/1.xml?api_key=01234567890123456789 
+http://www.ohloh.net/projects/1.xml?api_key=01234567890123456789
 ```
 
 For the sake of brevity, the `api_key` parameter will be omitted from the examples in this documentation. Remember to always include it in your actual queries.
@@ -160,7 +160,7 @@ Details about this project response can be found in the Ohloh API Reference [pro
 For example, to get the second page of projects containing “java” or “Java” in their titles, descriptions, or tags, you would request:
 
 ```
-GET http://www.ohloh.net/projects.xml?query=java&page=2 
+GET http://www.ohloh.net/projects.xml?query=java&page=2
 ```
 
 ### Collection Response XML Format
