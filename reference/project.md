@@ -55,7 +55,7 @@ A Project represents a collection of source code, documentation, and web sites t
 
 ```xml
 <tags>
-  <tag>ruby</factoid>
+  <tag>ruby</tag>
   <tag>gem</tag>
   <tag>web</tag>
 </tags>
