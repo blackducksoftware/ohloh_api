@@ -59,7 +59,7 @@ The project collection request supports the standard [collection request paramet
 + __sort__
     ContributorFact collections support the following sort options:
     - __name__
-    kudo_position
+    - __kudo_position__
     - __commits__
         Highest commits, first
     - __commits_12_mo (default)__
