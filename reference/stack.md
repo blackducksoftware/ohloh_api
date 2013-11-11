@@ -51,9 +51,9 @@ The Stack collection is paginated, and supports the standard [collection request
     If supplied, only Stacks owned by Accounts with names matching the query string will be returned.
 + __sort__
     Stack collections support the following sort options:
-    - _id_
-    - _name (default)_
-    - _created_at_ Time at which the Project was added to the stack
-    - _project_count_
+    - __id__
+    - __name__ (default)
+    - __created_at__ Time at which the Project was added to the stack
+    - __project_count__
 
 
