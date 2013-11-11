@@ -85,7 +85,7 @@ A Project represents a collection of source code, documentation, and web sites t
     The Licenses for the current project will be included under this node.
     - __name__
     Full Name of the License
-    - __nicename__
+    - __nice_name__
     A human-friendly name of the License
 
 
