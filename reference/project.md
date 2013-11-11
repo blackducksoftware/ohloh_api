@@ -22,7 +22,7 @@ A Project represents a collection of source code, documentation, and web sites t
     An url to the project’s 64×64 pixels logo image.
 + __small_logo_url__
     An url to the project’s 32×32 pixels logo image.
-+ __users_count__
++ __user_count__
     The number of users currently using this project.
 + __average_rating__
     A floating point value from 1.0 to 5.0, representing the average value of all user ratings. 1.0 is the worst possible rating and 5.0 is the highest possible rating. Will be null if no users have rated this project.
