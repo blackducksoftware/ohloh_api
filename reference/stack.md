@@ -52,8 +52,8 @@ The Stack collection is paginated, and supports the standard [collection request
 + __sort__
     Stack collections support the following sort options:
     - _id_
-    - _name (default)_
-    - _created_at_ Time at which the Project was added to the stack
-    - _project_count_
+    - _name_ (default)
+    - _created__at_ Time at which the Project was added to the stack
+    - _project__count_
 
 
