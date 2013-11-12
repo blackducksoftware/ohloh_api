@@ -24,6 +24,12 @@ The Analysis object described here contains only a few top-level metrics. Detail
     The last month for which monthly historical statistics are available for this project. Depending on when this analysis was prepared, max_month usually refers to the current month, but it may be slightly older. Only the year and month fields are significant. Ohloh’s monthly statistics for max_month are usually smaller than other months because the complete month has not yet elapsed, and it reflects ongoing development work.
 + __twelve_month_contributor_count__
     The number of contributors who made at least one commit to the project source code in the twelve months leading up to and including `max_month`.
++ __total_contributor_count__
+    The total number of contributors who made at least one commit to the project source code leading up to and including `max_month`.
++ __twelve_month_commit_count__
+    The number of commits to the project source code in the twelve months leading up to and including `max_month`.
++ __total_commit_count__
+    The total number of commits to the project source code leading up to and including `max_month`.
 + __total_code_lines__
     The most recent total count of all source code lines. Blank lines and comment lines are excluded.
 + __main_language_id__

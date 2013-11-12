@@ -54,12 +54,6 @@ The unique ID for the Account.
 + __kudo_score__
 If this account has a KudoScore, it will appear here. New accounts may not have a KudoScore. The Ohloh seb site displays these accounts with a default KudoRank of 1.
 
-+ __url__
-    The xml api url for this account.
-
-+ __html_url__
-    The url to this accounts details page on Ohloh.
-
 + __languages__
     Only available when requesting an accounts details, this node will not be returned as part of a search result list. This node contains the total language experience for this account grouped by language.Eachnode contains the following children:
     - __@color__

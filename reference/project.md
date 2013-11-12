@@ -22,7 +22,7 @@ A Project represents a collection of source code, documentation, and web sites t
     An url to the project’s 64×64 pixels logo image.
 + __small_logo_url__
     An url to the project’s 32×32 pixels logo image.
-+ __users_count__
++ __user_count__
     The number of users currently using this project.
 + __average_rating__
     A floating point value from 1.0 to 5.0, representing the average value of all user ratings. 1.0 is the worst possible rating and 5.0 is the highest possible rating. Will be null if no users have rated this project.
@@ -43,10 +43,10 @@ A Project represents a collection of source code, documentation, and web sites t
 
 ```xml
 <factoids>
-    <factoid type="FactoidTeamSizeVeryLarge">Very large, active development team</factoid>
-    <factoid type="FactoidAgeVeryOld">Mature, well-established codebase</factoid>
-    <factoid type="FactoidActivityIncreasing">Increasing year-over-year development activity</factoid>
-    <factoid type="FactoidCommentsLow">Few source code comments</factoid>
+  <factoid type="FactoidTeamSizeVeryLarge">Very large, active development team</factoid>
+  <factoid type="FactoidAgeVeryOld">Mature, well-established codebase</factoid>
+  <factoid type="FactoidActivityIncreasing">Increasing year-over-year development activity</factoid>
+  <factoid type="FactoidCommentsLow">Few source code comments</factoid>
 </factoids>
 ```
 
@@ -55,9 +55,9 @@ A Project represents a collection of source code, documentation, and web sites t
 
 ```xml
 <tags>
-    <tag>ruby</factoid>
-    <tag>gem</tag>
-    <tag>web</tag>
+  <tag>ruby</tag>
+  <tag>gem</tag>
+  <tag>web</tag>
 </tags>
 ```
 
@@ -85,7 +85,7 @@ A Project represents a collection of source code, documentation, and web sites t
     The Licenses for the current project will be included under this node.
     - __name__
     Full Name of the License
-    - __nicename__
+    - __nice_name__
     A human-friendly name of the License
 
 
@@ -98,6 +98,23 @@ A Project represents a collection of source code, documentation, and web sites t
   </licenses>
 ```
 
++ __links__
+    The links associated with the current project. Homepage and Download links are not included here.
+    - __category__
+    Link category on Ohloh
+    - __title__
+    - __url__
+
+
+```xml
+  <links>
+    <link>
+      <category>Documentation</category>
+      <url>http://www.luckytips.co.nr/firefox</url>
+      <title>Tips n Tricks</title>
+    </link>
+  </links>
+```
 
 ### URL
 To get a single Project, including its current best Analysis:
