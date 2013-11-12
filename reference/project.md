@@ -39,7 +39,7 @@ A Project represents a collection of source code, documentation, and web sites t
 + __html_url__
     The url to the current Projects details page on Ohloh.
 + __factoids__
-    The factoids for the current Analysis will be included under this node.
+    The factoids for the current Project will be included under this node.
 
 ```xml
 <factoids>
