@@ -61,11 +61,11 @@ A Project represents a collection of source code, documentation, and web sites t
 </tags>
 ```
 
-+ __language__
++ __languages__
     The language breakdown chart for the current Analysis will be included under this node. The node will have the following children:
-    - _@graph_url_
+    - _@graph__url
     This is the url to the PNG image that depicts the language breakdown for the current Analysis. The colors referenced in each languages @color attribute will be used in this image.
-    - _language_
+    - __language__
     Not every language will have a entry. Ohloh will will combine languages that do not make up a significant percentage into a aggregate entry “N Other”. This entry can be identified by either its @color, always “000000″ or @id, always “”.
     Each language will contain the following data
         - @color The color code that Ohloh uses to represent this language on the website. This color is also used in the language breakdown graph image.
