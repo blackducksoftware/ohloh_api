@@ -24,6 +24,7 @@ THE SOFTWARE.
 
 #include "TCPSocket.h"
 #include "main.h"
+#include <cstring>
 
 
 #define RESPONSE_MAX_SIZE 65536
