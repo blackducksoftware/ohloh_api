@@ -39,7 +39,7 @@ A Project represents a collection of source code, documentation, and web sites t
 + __html_url__
     The url to the current Projects details page on Ohloh.
 + __factoids__
-    The factoids for the current Analysis will be included under this node.
+    The factoids for the current analysis of the project will be included under this node.
 
 ```xml
 <factoids>
@@ -63,9 +63,9 @@ A Project represents a collection of source code, documentation, and web sites t
 
 + __language__
     The language breakdown chart for the current Analysis will be included under this node. The node will have the following children:
-    - _@graph_url_
+    - __@graph_url__
     This is the url to the PNG image that depicts the language breakdown for the current Analysis. The colors referenced in each languages @color attribute will be used in this image.
-    - _language_
+    - __language__
     Not every language will have a entry. Ohloh will will combine languages that do not make up a significant percentage into a aggregate entry “N Other”. This entry can be identified by either its @color, always “000000″ or @id, always “”.
     Each language will contain the following data
         - @color The color code that Ohloh uses to represent this language on the website. This color is also used in the language breakdown graph image.
