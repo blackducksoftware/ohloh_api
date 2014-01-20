@@ -95,6 +95,19 @@ If this account has a KudoScore, it will appear here. New accounts may not have 
 </languages>
 ```
 
++ __badges__
+Lists the badges awarded to the account holder.  All accounts have a Kudo Score of at least 1, so the Kudo Rank badge will always appear here.  Badges are listed with these attributes:
+    - __name__
+    The name of the badge
+    - __level__
+    The numeric value of the level for the badge.  Some badges are "binary", such as the Project Manager or the Organization Manager badges.  These are awarded when the account holder manages a project or organization, respectively.  For these types of badges, the level is '0'
+    - __description__
+    This is the description of the badge that is used for tool tips on Ohloh
+    - __image_url__
+    This is the URL of a 64x64 pixel icon of the badge image
+    - __pips_url__
+    This is the URL of a 15x64 pixel icon of the pips based on the level.  This will be empty when the level is 0.
+
 ### Making API Calls
 
 #### Individual account
