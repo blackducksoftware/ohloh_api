@@ -150,6 +150,7 @@ The Project collection request supports the standard [collection request paramet
     - __name_length__
         Length of project name. Shorter name, first
     - __updated_at__
+    - __relevance__
 
 
 
