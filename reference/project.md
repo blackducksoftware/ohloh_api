@@ -139,10 +139,6 @@ The Project collection request supports the standard [collection request paramet
     - __active_committers__
         Highest active committers in past 12 months, first
     - __activity_level__
-    - __commit_count__
-        Highest commits, first
-    - __committer_count__
-        Highest contributors, first
     - __stack_count__
     - __stack_count_reverse (default)__
     - __id__
