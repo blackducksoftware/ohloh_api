@@ -73,7 +73,7 @@ my $email_md5 = md5_hex($email);
 
 ### let's build the request url
 # first the base url
-my $url = 'http://www.ohloh.net/';
+my $url = 'https://www.openhub.net/';
 # then the email "page" we want
 $url .= "accounts/$email_md5.xml";
 # and finally the API version and the api key
