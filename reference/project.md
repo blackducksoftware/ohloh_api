@@ -5,9 +5,9 @@ A Project represents a collection of source code, documentation, and web sites t
 + __id__
     The unique ID for the Project.
 + __name__
-    The project name. Currently limited to 40 characters, and must be unique on Ohloh.
+    The project name. Currently limited to 40 characters, and must be unique on Open Hub.
 + __created_at__
-    The time at which this Project was initially added to the Ohloh database.
+    The time at which this Project was initially added to the Open Hub database.
 + __updated_at__
     The time of the most recent modification of this Project record.
 + __description__
@@ -17,7 +17,7 @@ A Project represents a collection of source code, documentation, and web sites t
 + __download_url__
     An optional URL to a website hosting project downloads.
 + __url_name__
-    A short, unique name for this project. This name is used in Ohloh URLs.
+    A short, unique name for this project. This name is used in Open Hub URLs.
 + __medium_logo_url__
     An url to the project’s 64×64 pixels logo image.
 + __small_logo_url__
@@ -37,7 +37,7 @@ A Project represents a collection of source code, documentation, and web sites t
 + __url__
     The xml api url for the current Project.
 + __html_url__
-    The url to the current Projects details page on Ohloh.
+    The url to the current Projects details page on Open Hub.
 + __factoids__
     The factoids for the current analysis of the project will be included under this node.
 
@@ -66,11 +66,11 @@ A Project represents a collection of source code, documentation, and web sites t
     - __@graph_url__
     This is the url to the PNG image that depicts the language breakdown for the current Analysis. The colors referenced in each languages @color attribute will be used in this image.
     - __language__
-    Not every language will have a entry. Ohloh will will combine languages that do not make up a significant percentage into a aggregate entry “N Other”. This entry can be identified by either its @color, always “000000″ or @id, always “”.
+    Not every language will have a entry. Open Hub will will combine languages that do not make up a significant percentage into a aggregate entry “N Other”. This entry can be identified by either its @color, always “000000″ or @id, always “”.
     Each language will contain the following data
-        - @color The color code that Ohloh uses to represent this language on the website. This color is also used in the language breakdown graph image.
+        - @color The color code that Open Hub uses to represent this language on the website. This color is also used in the language breakdown graph image.
         - @percentage The percentage of lines of code that the current language represents in the current Analysis
-        - @id The Ohloh language id.
+        - @id The Open Hub language id.
 
 ```xml
 <languages graph_url="https://openhub.net/p/firefox/analyses/9239902/languages.png">
@@ -101,7 +101,7 @@ A Project represents a collection of source code, documentation, and web sites t
 + __links__
     The links associated with the current project. Homepage and Download links are not included here.
     - __category__
-    Link category on Ohloh
+    Link category on Open Hub
     - __title__
     - __url__
 

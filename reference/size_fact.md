@@ -5,7 +5,7 @@ SizeFacts contain the running totals of [ActivityFacts](activity_fact.md).
 
 A SizeFact is derived from lower-level statistics contained in an [Analysis](analysis.md). SizeFacts are updated whenever a [Project](project.md) is re-analyzed.
 
-SizeFacts are availabled only after Ohloh has downloaded and analyzed the project source code.
+SizeFacts are availabled only after Open Hub has downloaded and analyzed the project source code.
 
 ### Properties
 
@@ -34,6 +34,6 @@ If you do not know the ID of the current best Analysis for a Project, you can us
 curl https://www.openhub.net/projects/{project_id}/analyses/latest/size_facts.xml 
 ```
 
-The call returns one SizeFact for each month, starting at the first month in which any code exists, and ending at the month in which Ohloh last created a new Analysis for this Project. Typically, the collection ends at the current month, but if the Project has not been re-analyzed in a while, the collection may end sooner.
+The call returns one SizeFact for each month, starting at the first month in which any code exists, and ending at the month in which Open Hub last created a new Analysis for this Project. Typically, the collection ends at the current month, but if the Project has not been re-analyzed in a while, the collection may end sooner.
 
 The results cannot be paginated or filtered. Results are sorted chronologically.

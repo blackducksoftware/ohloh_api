@@ -1,10 +1,10 @@
-## Ohloh API Examples #
-Some basic [Ohloh](https://www.openhub.net) API samples to help you get started. For information on the Ohloh API, please see the [documentation](/README.md). The Ohloh API has some restrictions, so please review the complete [Terms of Use](http://meta.ohloh.net/terms-2) before you begin.
+## Open Hub API Examples #
+Some basic [Open Hub](https://www.openhub.net) API samples to help you get started. For information on the Open Hub API, please see the [documentation](/README.md). The Open Hub API has some restrictions, so please review the complete [Terms of Use](http://meta.ohloh.net/terms-2) before you begin.
 
 ### Examples are available in: ###
 * BASH
 
-  Uses `curl` to pull an [Account](/reference/account.md) from Ohloh and `openssl` to create MD5 hex of the email address. A simple sed hack parses the XML response into name:value pairs. The example demonstrates data retrieval using email address lookup. Pass your API key and the email address of the Account you are requsting as parameters to the script:
+  Uses `curl` to pull an [Account](/reference/account.md) from Open Hub and `openssl` to create MD5 hex of the email address. A simple sed hack parses the XML response into name:value pairs. The example demonstrates data retrieval using email address lookup. Pass your API key and the email address of the Account you are requsting as parameters to the script:
 
   `./account_sample.sh YOUR_API_KEY_HERE rluckey@blackducksoftware.com`
 
@@ -12,7 +12,7 @@ Some basic [Ohloh](https://www.openhub.net) API samples to help you get started.
 
 * Ruby
 
-  Performs the same email-based account lookup, but uses more rigorous error handling and parsing to create a structured XML document object. Using the `REXML` library, you can build a more robust interface to the Ohloh API.
+  Performs the same email-based account lookup, but uses more rigorous error handling and parsing to create a structured XML document object. Using the `REXML` library, you can build a more robust interface to the Open Hub API.
 
   Execute the script by passing your API key and an email address as parameters:
 
@@ -20,7 +20,7 @@ Some basic [Ohloh](https://www.openhub.net) API samples to help you get started.
 
 * Python
 
-  Performs a similar account lookup on Ohloh. It requires `urllib`, `hashlib` and `elementtree`.
+  Performs a similar account lookup on Open Hub. It requires `urllib`, `hashlib` and `elementtree`.
 
   Execute the script by passing your API key and an email address as parameters:
 
@@ -30,7 +30,7 @@ Some basic [Ohloh](https://www.openhub.net) API samples to help you get started.
 
 * Perl
 
-  Performs a similar account lookup on Ohloh. It requires the `LWP::Simple`, `Digest::MD5`, and `XML::Simple` libraries.
+  Performs a similar account lookup on Open Hub. It requires the `LWP::Simple`, `Digest::MD5`, and `XML::Simple` libraries.
 
   Execute the script by passing your API key and an email address as parameters:
 
@@ -40,7 +40,7 @@ Some basic [Ohloh](https://www.openhub.net) API samples to help you get started.
 
 * Java
 
-  Uses Java’s networking capabilities to pull an [Account](/reference/account.md) from Ohloh. It demonstrates how to generate an MD5 hash of an email address to use as a lookup key, then uses DOM to parse the XML response.
+  Uses Java’s networking capabilities to pull an [Account](/reference/account.md) from Open Hub. It demonstrates how to generate an MD5 hash of an email address to use as a lookup key, then uses DOM to parse the XML response.
 
   Pass your API key and the email address of the Account you are requesting as parameters:
 
@@ -70,7 +70,7 @@ Some basic [Ohloh](https://www.openhub.net) API samples to help you get started.
 
 * PHP
 
-  Paul Scott has created a full-featured PHP class for accessing the Ohloh API, complete with documentation. You can find it at the [PHP Classes](http://www.phpclasses.org/browse/package/4261.html) website.
+  Paul Scott has created a full-featured PHP class for accessing the Open Hub API, complete with documentation. You can find it at the [PHP Classes](http://www.phpclasses.org/browse/package/4261.html) website.
 
 
 Your feedback on these examples will benefit everyone, and we’re eager for input on improvements.   

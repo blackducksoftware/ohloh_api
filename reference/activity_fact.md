@@ -5,7 +5,7 @@ An ActivityFact is a pre-computed collection of statistics about [Project](/refe
 
 An ActivityFact is derived from lower-level statistics contained in an [Analysis](/reference/analysis.md). ActivityFacts are updated whenever a [Project](/reference/project.md) is re-analyzed.
 
-ActivityFacts are availabled only after Ohloh has downloaded and analyzed the project source code.
+ActivityFacts are availabled only after Open Hub has downloaded and analyzed the project source code.
 
 ### Properties
 
@@ -38,6 +38,6 @@ If you do not know the ID of the current best Analysis for a Project, you can us
 curl https://www.openhub.net/projects/{project_id}/analyses/latest/activity_facts.xml
 ```
 
-The call returns one Activity for each month, starting at the first month in which any code exists, and ending at the current month. If Ohloh has not created a new Analysis for this Project in a long time, the ActivityFacts for the months following the time of the last Analysis will contain zeros.
+The call returns one Activity for each month, starting at the first month in which any code exists, and ending at the current month. If Open Hub has not created a new Analysis for this Project in a long time, the ActivityFacts for the months following the time of the last Analysis will contain zeros.
 
 The results cannot be paginated or filtered. Results are sorted chronologically.

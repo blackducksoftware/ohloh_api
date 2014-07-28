@@ -4,7 +4,7 @@
 
 =head1 NAME
 
-account_sample.pl - Simple example of using the Ohloh API from Perl
+account_sample.pl - Simple example of using the Open Hub API from Perl
 
 =head1 SYNOPSIS
 
@@ -12,14 +12,14 @@ account_sample.pl api_key email
 
 =head1 DESCRIPTION
 
-This is a small example of how to use the Ohloh API from Perl,
+This is a small example of how to use the Open Hub API from Perl,
 mimicking the Ruby example - account_sample.rb
 
-Detailed information about the Ohloh API can be found at
+Detailed information about the Open Hub API can be found at
 https://github.com/blackducksw/ohloh_api
 
 The script takes an API key and the email address of a developer
-registered on Ohloh as parameters, and prints out all the
+registered on Open Hub as parameters, and prints out all the
 information of that account.
 
 =head1 EXAMPLE
@@ -29,7 +29,7 @@ information of that account.
 =head1 DEPENDENCIES
 
 This script uses
-L<LWP::Simple> (to query the Ohloh website),
+L<LWP::Simple> (to query the Open Hub website),
 L<Digest::MD5> (to MD5s the email address as requested by the API)
 and
 L<XML::Simple> (to parse the server's answer).
@@ -80,7 +80,7 @@ $url .= "accounts/$email_md5.xml";
 $url .= '?' . join '&' => "v=$API_VERSION", "api_key=$api_key";
 
 # request the url from the server
-my $response = get $url or die "Ohloh server didn't return anything\n";
+my $response = get $url or die "Open Hub server didn't return anything\n";
 
 # parse the XML response
 my $xml = eval { XMLin($response) } or die "Server didn't return valid XML\n";

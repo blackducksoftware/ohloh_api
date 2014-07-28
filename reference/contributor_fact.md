@@ -6,7 +6,7 @@ A ContributorFact is part of an [Analysis](/reference/analysis.md), and is deriv
 
 A new ContributorFact is created for each Project contributor whenever a new Analysis is created for the Project.
 
-ContributorFacts only exist after Ohloh has downloaded and analyzed the project source code.
+ContributorFacts only exist after Open Hub has downloaded and analyzed the project source code.
 
 ### Properties
 
@@ -18,15 +18,15 @@ ContributorFacts only exist after Ohloh has downloaded and analyzed the project 
 + __contributor_name__
     The name used by the author of this code when committing to the source control server.
 + __account_id__
-    If this contribution has been claimed by an Ohloh member, the element contains the unique ID of the Ohloh [Account](/reference/account.md). Otherwise, this element is omitted.
+    If this contribution has been claimed by an Open Hub member, the element contains the unique ID of the Open Hub [Account](/reference/account.md). Otherwise, this element is omitted.
 + __account_name__
-    If this contribution has been claimed by an Ohloh member, this element contains the Account name. Otherwise, this element is omitted.
+    If this contribution has been claimed by an Open Hub member, this element contains the Account name. Otherwise, this element is omitted.
 + __primary_language_id__
-    The unique ID of the [Language](/reference/language.md) most often used by this contributor, measured by the number of code lines added. If this contributor has not committed any code in a language which Ohloh can recognize, this value will be null.
+    The unique ID of the [Language](/reference/language.md) most often used by this contributor, measured by the number of code lines added. If this contributor has not committed any code in a language which Open Hub can recognize, this value will be null.
 + __primary_language_nice_name__
     The `nice_name` of the Language specified by `primary_language_id`.
 + __comment_ratio__
-    The fraction of new lines added by this contributor which are comments. Note that Ohloh does not track the net lines of current code attributable to an specific individual. This statistic merely sums over all new lines added, and does not consider whether the added lines were later removed by this contributor or any other.
+    The fraction of new lines added by this contributor which are comments. Note that Open Hub does not track the net lines of current code attributable to an specific individual. This statistic merely sums over all new lines added, and does not consider whether the added lines were later removed by this contributor or any other.
 + __first_commit_time__
     The time of the first commit by this contributor.
 + __last_commit_time__
@@ -55,7 +55,7 @@ ContributorFacts returned from this call will not include ContributorLanguageFac
 The project collection request supports the standard [collection request parameters](/README.md#collection-requests), with the following details:
 
 + __query__
-    If supplied, only ContributorFacts with a matching `contributor_name` will be returned. Ohloh account names are not matched.
+    If supplied, only ContributorFacts with a matching `contributor_name` will be returned. Open Hub account names are not matched.
 + __sort__
     ContributorFact collections support the following sort options:
     - __name__

@@ -1,6 +1,6 @@
 ## Account
 
-An Account represents an Ohloh member. Some Account data is private, and cannot be accessed through the Ohloh API.
+An Account represents an Open Hub member. Some Account data is private, and cannot be accessed through the Open Hub API.
 
 ### Properties
 + __id__
@@ -16,7 +16,7 @@ The unique ID for the Account.
     The Login handle for this account.
 
 + __created_at__
-    The time at which this Account was originally created on Ohloh.
+    The time at which this Account was originally created on Open Hub.
 
 + __updated_at__
     The time at which this Account record was last modified.
@@ -34,13 +34,13 @@ The unique ID for the Account.
     A URL to the profile's Home page for this account.
 
 + __avatar_url__
-    A URL to the profile image displayed on Ohloh pages. Currently, this is an URL to the Gravatar free image hosting service, which will resolves to a default image if the account holder is not a Gravatar member. Images are 80×80 by default.
+    A URL to the profile image displayed on Open Hub pages. Currently, this is an URL to the Gravatar free image hosting service, which will resolves to a default image if the account holder is not a Gravatar member. Images are 80×80 by default.
 
 + __email_sha1__
     The SHA1 hex digest of the account email address.
 
 + __posts_count__
-    The number of posts made to the Ohloh forums by this account.
+    The number of posts made to the Open Hub forums by this account.
 
 + __location__
     An optional text description of this account holder’s claimed location. This text has been validated by either the Google or Yahoo geocoder web service, but the precision is variable.
@@ -52,16 +52,16 @@ The unique ID for the Account.
     Floating-point values representing the account’s latitude and longitude, suitable for use with the Google Maps API. They are available only when the account has specified a valid location.
 
 + __kudo_score__
-If this account has a KudoScore, it will appear here. New accounts may not have a KudoScore. The Ohloh seb site displays these accounts with a default KudoRank of 1.
+If this account has a KudoScore, it will appear here. New accounts may not have a KudoScore. The Open Hub seb site displays these accounts with a default KudoRank of 1.
 
 + __languages__
     Only available when requesting an accounts details, this node will not be returned as part of a search result list. This node contains the total language experience for this account grouped by language.Eachnode contains the following children:
     - __@color__
-    This is the Ohloh color code for this language. If you will be displaying this data in your application it is highly recommended you use the colors returned here as these are the same colors Ohloh uses to display specific languages.
+    This is the Open Hub color code for this language. If you will be displaying this data in your application it is highly recommended you use the colors returned here as these are the same colors Open Hub uses to display specific languages.
     - __name__
-    The Ohloh code name for this language, e.g. C# will be csharp and C++ will be cpp.
+    The Open Hub code name for this language, e.g. C# will be csharp and C++ will be cpp.
     - __experience_months__
-    The total number of months that Ohloh has computed as experience in this language for the current Account.
+    The total number of months that Open Hub has computed as experience in this language for the current Account.
     - __total_commits__
     The total number of commits made by the current Account that contained code in the current Language.
     - __total_lines_changed__
@@ -102,7 +102,7 @@ Lists the badges awarded to the account holder.  All accounts have a Kudo Score 
     - __level__
     The numeric value of the level for the badge.  Some badges are "binary", such as the Project Manager or the Organization Manager badges.  These are awarded when the account holder manages a project or organization, respectively.  For these types of badges, the level is '0'
     - __description__
-    This is the description of the badge that is used for tool tips on Ohloh
+    This is the description of the badge that is used for tool tips on Open Hub
     - __image_url__
     This is the URL of a 64x64 pixel icon of the badge image
     - __pips_url__
@@ -142,8 +142,8 @@ The account collection method supports the standard [collection request paramete
         Recently updated, first
 
 ### A Note about Country Codes
-Ohloh preferentially uses the [Google Maps API](http://www.google.com/apis/maps/documentation/index.html) geocoder to resolve location names entered by users. `country_code` values obtained from the Google Maps API use two-letter abbreviations.
+Open Hub preferentially uses the [Google Maps API](http://www.google.com/apis/maps/documentation/index.html) geocoder to resolve location names entered by users. `country_code` values obtained from the Google Maps API use two-letter abbreviations.
 
-However, Google’s coverage is not complete, and not all countries can be resolved. For countries that cannot be resolved by the Google geocoder, Ohloh falls back to the Yahoo geocoder. These countries include the United Kingdom and China. `country_code` values obtained from Yahoo are full country names, not two-letter abbreviations.
+However, Google’s coverage is not complete, and not all countries can be resolved. For countries that cannot be resolved by the Google geocoder, Open Hub falls back to the Yahoo geocoder. These countries include the United Kingdom and China. `country_code` values obtained from Yahoo are full country names, not two-letter abbreviations.
 
-For this reason, there are two data formats intermingled in country_code. Ohloh does not use this data internally, so the data has not been cleaned and unified.
+For this reason, there are two data formats intermingled in country_code. Open Hub does not use this data internally, so the data has not been cleaned and unified.

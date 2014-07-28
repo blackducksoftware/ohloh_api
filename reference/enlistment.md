@@ -1,7 +1,7 @@
 ## Enlistment
 An Enlistment joins a [Project](/reference/project.md) to a source control [Repository](/reference/repository.md).
 
-Once added to the Ohloh database, a Repository is permanent. However, Enlistments to that Repository may be added or removed at any time. Many Projects may share a single Repository.
+Once added to the Open Hub database, a Repository is permanent. However, Enlistments to that Repository may be added or removed at any time. Many Projects may share a single Repository.
 
 ### Properties
 
