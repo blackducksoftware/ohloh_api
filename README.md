@@ -35,13 +35,13 @@ Send bug reports to info@ohloh.net.
     - [SizeFact](reference/size_fact.md)
     - [Stack](reference/stack.md)
     - [StackEntry](reference/stack_entry.md)
-+ [API Use Agreement](http://meta.ohloh.net/terms-2/)
++ [API Use Agreement](http://blog.openhub.net/terms-2/)
 + [Apply for an API Key](https://www.openhub.net/accounts/me/api_keys/new)
 + [API Key Status](https://www.openhub.net/accounts/me/api_keys)
 
 ## Terms of Use
 
-The Open Hub API has some restrictions. Please review the complete [Terms of Use](http://meta.ohloh.net/terms-2/) before you begin.
+The Open Hub API has some restrictions. Please review the complete [Terms of Use](http://blog.openhub.net/terms-2/) before you begin.
 
 We ask that you cite Open Hub in publications that use our data. Please include a link to https://www.openhub.net on your web pages.
 

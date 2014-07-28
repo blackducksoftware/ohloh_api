@@ -1,5 +1,5 @@
 ## Open Hub API Examples #
-Some basic [Open Hub](https://www.openhub.net) API samples to help you get started. For information on the Open Hub API, please see the [documentation](/README.md). The Open Hub API has some restrictions, so please review the complete [Terms of Use](http://meta.ohloh.net/terms-2) before you begin.
+Some basic [Open Hub](https://www.openhub.net) API samples to help you get started. For information on the Open Hub API, please see the [documentation](/README.md). The Open Hub API has some restrictions, so please review the complete [Terms of Use](http://blog.openhub.net/terms-2) before you begin.
 
 ### Examples are available in: ###
 * BASH
