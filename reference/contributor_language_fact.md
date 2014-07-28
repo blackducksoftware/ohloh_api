@@ -32,6 +32,6 @@ ContributorLanguageFacts only exist after Ohloh has downloaded and analyzed the 
 ### Collection URL
 To get a list of all ContributorLanguageFacts for a particular contributor, based on the lastest Analysis for a Project:
 ```shell
-curl http://www.ohloh.net/projects/{project_id}/contributors/{contributor_id}.xml 
+curl https://www.openhub.net/projects/{project_id}/contributors/{contributor_id}.xml
 ```
 This is the same URL used to obtain a [ContributorFact](/reference/contributor_fact.md). The ContributorFact returned by this call will include within it a collection of ContributorLanguageFacts.

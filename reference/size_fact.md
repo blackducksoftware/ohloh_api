@@ -27,11 +27,11 @@ SizeFacts are availabled only after Ohloh has downloaded and analyzed the projec
 ### Collection URL
 To get all SizeFacts for a particular [Analysis](analysis.md):
 ```shell
-curl http://www.ohloh.net/projects/{project_id}/analyses/{analysis_id}/size_facts.xml
+curl https://www.openhub.net/projects/{project_id}/analyses/{analysis_id}/size_facts.xml
 ```
 If you do not know the ID of the current best Analysis for a Project, you can use the following shortcut:
 ```shell
-curl http://www.ohloh.net/projects/{project_id}/analyses/latest/size_facts.xml 
+curl https://www.openhub.net/projects/{project_id}/analyses/latest/size_facts.xml 
 ```
 
 The call returns one SizeFact for each month, starting at the first month in which any code exists, and ending at the month in which Ohloh last created a new Analysis for this Project. Typically, the collection ends at the current month, but if the Project has not been re-analyzed in a while, the collection may end sooner.

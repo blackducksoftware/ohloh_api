@@ -32,11 +32,11 @@ Ocassionally, an Ohloh Account holder may claim to be a Project contributor who 
 ### Collection URL
 To get a list of all Kudos received by an Account:
 ```shell
-curl http://www.ohloh.net/accounts/{account_id}/kudos.xml
+curl https://www.openhub.net/accounts/{account_id}/kudos.xml
 ```
 To get a list of all Kudos sent by an Account:
 ```shell
-curl http://www.ohloh.net/accounts/{account_id}/kudos/sent.xml 
+curl https://www.openhub.net/accounts/{account_id}/kudos/sent.xml 
 ```
 These methods do not support any sorting, filtering, or paging options. You will always receive the complete list of all Kudos, sorted from new to old.
 

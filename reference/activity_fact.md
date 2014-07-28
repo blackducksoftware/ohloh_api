@@ -31,11 +31,11 @@ ActivityFacts are availabled only after Ohloh has downloaded and analyzed the pr
 ### Collection URL
 To get all ActivityFacts for a particular [Analysis](/reference/analysis.md):
 ```shell
-curl http://www.ohloh.net/projects/{project_id}/analyses/{analysis_id}/activity_facts.xml 
+curl https://www.openhub.net/projects/{project_id}/analyses/{analysis_id}/activity_facts.xml
 ```
 If you do not know the ID of the current best Analysis for a Project, you can use the `latest` as a shortcut for latest published analysis.
 ```shell
-curl http://www.ohloh.net/projects/{project_id}/analyses/latest/activity_facts.xml
+curl https://www.openhub.net/projects/{project_id}/analyses/latest/activity_facts.xml
 ```
 
 The call returns one Activity for each month, starting at the first month in which any code exists, and ending at the current month. If Ohloh has not created a new Analysis for this Project in a long time, the ActivityFacts for the months following the time of the last Analysis will contain zeros.

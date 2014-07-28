@@ -26,11 +26,11 @@ A Stack contains zero or more [StackEntries](stack_entry.md), each of which link
 ### URL
 To get a single Stack belonging to an Account:
 ```shell
-curl http://www.ohloh.net/accounts/{account_id}/stacks/{stack_id}.xml 
+curl https://www.openhub.net/accounts/{account_id}/stacks/{stack_id}.xml 
 ```
 A handy shortcut for getting the default Stack for an Account when you don’t know the stack_id:
 ```shell
-curl http://www.ohloh.net/accounts/{account_id}/stacks/default.xml 
+curl https://www.openhub.net/accounts/{account_id}/stacks/default.xml 
 ```
 This method is not paginated — you will always receive a single Stack. However, this Stack may contain a very large number of StackEntries within it. Each StackEntry will include a full Project object.
 
@@ -39,7 +39,7 @@ If you do not know the Account ID, you can also retrieve the Stack using the MD5
 ### Collection URL
 To get a list of all Stacks for a particular Project:
 ```shell
-GET http://www.ohloh.net/projects/{project_id}/stacks.xml 
+GET https://www.openhub.net/projects/{project_id}/stacks.xml 
 ```
 The Stacks returned in this collection will each contain only a single [StackEntry](stack_entry.md), corresponding to the Project in question.
 

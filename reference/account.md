@@ -113,12 +113,12 @@ Lists the badges awarded to the account holder.  All accounts have a Kudo Score 
 #### Individual account
 To get a single Account:
 ```shell
-curl http://www.ohloh.net/accounts/{account_id}.xml 
+curl https://www.openhub.net/accounts/{account_id}.xml
 ```
 
 You can also retrieve an Account using the MD5 hash of the email address, if you know it:
 ```shell
-curl http://www.ohloh.net/accounts/{email_md5_hash}.xml 
+curl https://www.openhub.net/accounts/{email_md5_hash}.xml
 ```
 
 Read more about email-based queries [here](/email_lookup.md).
@@ -126,7 +126,7 @@ Read more about email-based queries [here](/email_lookup.md).
 #### Collection of accounts
 To get a list of all Accounts:
 ```shell
-curl http://www.ohloh.net/accounts.xml 
+curl https://www.openhub.net/accounts.xml
 ```
 
 The account collection method supports the standard [collection request parameters](/README.md#collection-requests) with the following details:
