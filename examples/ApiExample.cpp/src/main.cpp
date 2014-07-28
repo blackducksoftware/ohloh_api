@@ -41,7 +41,7 @@ int main(int argc, const char * argv[])
   std::istringstream str(infoPair.second);
   MD5 md5(str);
 
-  std::string urlString = "http://www.ohloh.net/accounts/";
+  std::string urlString = "https://www.openhub.net/accounts/";
   urlString += md5.hex_digest();
   urlString += ".xml?api_key=" + infoPair.first + "&v=1";
 

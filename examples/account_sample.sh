@@ -35,7 +35,7 @@
 # Ohloh API keys are free. If you do not have one, you can obtain one
 # at the Ohloh website:
 #
-#     http://www.ohloh.net/accounts/<your_login>/api_keys/new
+#     https://www.openhub.net/accounts/<your_login>/api_keys/new
 #
 # Pass the email address of the account as the second parameter to this script.
 
@@ -55,7 +55,7 @@ EMAIL_MD5=`echo -n $2 | openssl md5 | cut -f2 -d" "`
 #
 # We use the --fail option so that curl will return a non-zero exit status if Ohloh returns an error.
 # This also means that the error message text returned from Ohloh will be suppressed from the output.
-curl --fail -s "www.ohloh.net/accounts/$EMAIL_MD5.xml?v=1&api_key=$API_KEY" | sed -n 's/ *<\(.*\)>\(.*\)<\/\1>$/\1: \2/ p'
+curl --fail -s "https://www.openhub.net/accounts/$EMAIL_MD5.xml?v=1&api_key=$API_KEY" | sed -n 's/ *<\(.*\)>\(.*\)<\/\1>$/\1: \2/ p'
 
 # Forward along the exit status from curl
 exit $PIPESTATUS

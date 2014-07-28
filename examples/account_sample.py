@@ -43,7 +43,7 @@ Pass your Ohloh API key as the first parameter to this script.
 Ohloh API keys are free. If you do not have one, you can obtain one
 at the Ohloh website:
 
-     http://www.ohloh.net/accounts/<your_login>/api_keys/new
+     https://www.openhub.net/accounts/<your_login>/api_keys/new
 
 Pass the email address of the account as the second parameter to this script.
 """
@@ -61,7 +61,7 @@ email.update(sys.argv[2])
 
 # Connect to the Ohloh website and retrieve the account data.
 params = urllib.urlencode({'api_key': sys.argv[1], 'v': 1})
-url = "http://www.ohloh.net/accounts/%s.xml?%s" % (email.hexdigest(), params)
+url = "https://www.openhub.net/accounts/%s.xml?%s" % (email.hexdigest(), params)
 f = urllib.urlopen(url)
 
 # Parse the response into a structured XML object
