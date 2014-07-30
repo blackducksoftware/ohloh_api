@@ -8,7 +8,7 @@ Instead of handing out your Open Hub account password to a third-party applicati
 
 ### Using OAuth 
 In order to become Open Hub OAuth consumer, you'd need to get your key and secret from your [API Keys](https://www.openhub.net/accounts/me/api_keys) page. Open Hub supports OAuth 1.0a.
-[ohloh_oauth_sinatra.rb](/examples/oauth/ohloh_oauth_sinatra.rb) is a simple [Sinatra](http://www.sinatrarb.com/) based example using [oauth gem](https://github.com/oauth-xx/oauth-ruby) that fetches authenticated user's [account](/reference/account.md) xml.
+[oauth_sinatra.rb](/examples/oauth/oauth_sinatra.rb) is a simple [Sinatra](http://www.sinatrarb.com/) based example using [oauth gem](https://github.com/oauth-xx/oauth-ruby) that fetches authenticated user's [account](/reference/account.md) xml.
 
 Although not affiliated with Open Hub, [OmniAuth](https://github.com/intridea/omniauth) appears to have Ohloh strategy available [here](https://github.com/RodrigoAyala/omniauth-ohloh). This code is not supported, tested or verified by Open Hub.
 
