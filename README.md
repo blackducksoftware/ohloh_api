@@ -10,7 +10,7 @@ This page contains important summary information to help you get started. In-dep
 
 Some sample code can be found on the [Examples](examples/) page. For questions not covered in the documenation, the [Open Hub API forum](https://www.openhub.net/forums/3492) can provide additional help.
 
-Send bug reports to info@ohloh.net.
+Send bug reports to info@openhub.net.
 
 ## Table of Contents
 + [Lookup By Email](email_lookup.md)
@@ -63,7 +63,7 @@ It is important not to share API keys. In order to access or modify account data
 
 You can [register a new application](https://www.openhub.net/accounts/me/api_keys/new) or [view the status](https://www.openhub.net/accounts/me/api_keys) of your existing applications online.
 
-If you have special requirements for additional keys, or if you are interested in building a large-scale application, please contact us at info@ohloh.net.
+If you have special requirements for additional keys, or if you are interested in building a large-scale application, please contact us at info@openhub.net.
 
 ## OAuth Impersonation
 

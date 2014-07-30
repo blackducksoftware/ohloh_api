@@ -76,4 +76,4 @@ Some basic [Open Hub](https://www.openhub.net) API samples to help you get start
 Your feedback on these examples will benefit everyone, and we’re eager for input on improvements.   
 We’d also appreciate help translating the samples into more languages.
 
-Please don’t hesitate to contact us at info@ohloh.net.
+Please don’t hesitate to contact us at info@openhub.net.

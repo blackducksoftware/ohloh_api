@@ -24,7 +24,7 @@ information of that account.
 
 =head1 EXAMPLE
 
-    ./account_sample.pl YOUR_API_KEY_HERE robin@ohloh.net
+    ./account_sample.pl YOUR_API_KEY_HERE robin@openhub.net
 
 =head1 DEPENDENCIES
 
