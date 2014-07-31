@@ -1,5 +1,5 @@
 ## Ohloh API Examples #
-Some basic [Ohloh](https://www.openhub.net) API samples to help you get started. For information on the Ohloh API, please see the [documentation](/README.md). The Ohloh API has some restrictions, so please review the complete [Terms of Use](http://meta.ohloh.net/terms-2) before you begin.
+Some basic [Ohloh](https://www.openhub.net) API samples to help you get started. For information on the Ohloh API, please see the [documentation](/README.md). The Ohloh API has some restrictions, so please review the complete [Terms of Use](http://blog.openhub.net/terms-2) before you begin.
 
 ### Examples are available in: ###
 * BASH
