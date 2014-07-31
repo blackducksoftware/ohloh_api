@@ -27,5 +27,5 @@ A position represents a contribution or series of contributions that an account 
 ### URL
 To get positions for an account:
 ```shell
-curl http://www.ohloh.net/accounts/{account_id}/positions.xml
+curl https://www.openhub.net/accounts/{account_id}/positions.xml
 ```

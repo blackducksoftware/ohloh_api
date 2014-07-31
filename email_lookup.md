@@ -14,7 +14,7 @@ $ md5 -q -s robin@ohloh.net 63f26c4a00677ea1e8b14d2a56efb104
 
 + Pass this hash in place of the account ID in the normal http request:
 ```shell
-$ curl http://www.ohloh.net/accounts/63f26c4a00677ea1e8b14d2a56efb104
+$ curl https://www.openhub.net/accounts/63f26c4a00677ea1e8b14d2a56efb104
 ```
 
 Ohloh does not publish email addresses. You must already know the email address of the account you are looking for. Because the search is done using the MD5 hash of the email address, the email address comparison is case sensitive and must match exactly.

@@ -32,13 +32,13 @@ Language statistics are updated daily.
 ### URL
 To get a single Language:
 ```shell
-curl http://www.ohloh.net/languages/{language_id}.xml 
+curl https://www.openhub.net/languages/{language_id}.xml 
 ```
 
 ### Collection URL
 To get a paginated list of all Languages:
 ```shell
-curl http://www.ohloh.net/languages.xml 
+curl https://www.openhub.net/languages.xml 
 ```
 The Language collection request supports the standard [collection request parameters](/README.md#collection-requests), with the following sort options:
 

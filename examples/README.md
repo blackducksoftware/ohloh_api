@@ -1,5 +1,5 @@
 ## Ohloh API Examples #
-Some basic [Ohloh](http://www.ohloh.net) API samples to help you get started. For information on the Ohloh API, please see the [documentation](/README.md). The Ohloh API has some restrictions, so please review the complete [Terms of Use](http://meta.ohloh.net/terms-2) before you begin.
+Some basic [Ohloh](https://www.openhub.net) API samples to help you get started. For information on the Ohloh API, please see the [documentation](/README.md). The Ohloh API has some restrictions, so please review the complete [Terms of Use](http://meta.ohloh.net/terms-2) before you begin.
 
 ### Examples are available in: ###
 * BASH
@@ -26,7 +26,7 @@ Some basic [Ohloh](http://www.ohloh.net) API samples to help you get started. Fo
 
   `./account_sample.py YOUR_API_KEY_HERE rluckey@blackducksoftware.com`
 
-  Many thanks to [Thijs Triemstra](http://www.ohloh.net/accounts/3953) for contributing this sample.
+  Many thanks to [Thijs Triemstra](https://www.openhub.net/accounts/3953) for contributing this sample.
 
 * Perl
 
@@ -36,7 +36,7 @@ Some basic [Ohloh](http://www.ohloh.net) API samples to help you get started. Fo
 
   `./account_sample.pl YOUR_API_KEY_HERE rluckey@blackducksoftware.com`
 
-  Many thanks to [Yanick Champoux](http://www.ohloh.net/accounts/12933) for contributing this sample.
+  Many thanks to [Yanick Champoux](https://www.openhub.net/accounts/12933) for contributing this sample.
 
 * Java
 
@@ -66,7 +66,7 @@ Some basic [Ohloh](http://www.ohloh.net) API samples to help you get started. Fo
 
   `./bin/ApiExample YOUR_API_KEY_HERE rluckey@blackducksoftware.com`
 
-  Many thanks to [Lars ‘Levia’ Wesselius](http://www.ohloh.net/accounts/739) for providing the sample code in both C++ and Java!
+  Many thanks to [Lars ‘Levia’ Wesselius](https://www.openhub.net/accounts/739) for providing the sample code in both C++ and Java!
 
 * PHP
 
