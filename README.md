@@ -2,15 +2,15 @@
 
 ## Welcome
 
-The Ohloh API is a free, REST-based programming interface to the Ohloh open source directory. You can use the Ohloh API to create your own applications and web services based on Ohloh data.
+The Ohloh API is a free, REST-based programming interface to the Open Hub open source directory. You can use the Ohloh API to create your own applications and web services based on Open Hub data.
 
 ## Getting Help
 
 This page contains important summary information to help you get started. In-depth online documentation is available, linked by the table of contents below.
 
-Some sample code can be found on the [Examples](examples/) page. For questions not covered in the documenation, the [Ohloh API forum](http://www.ohloh.net/forums/3492) can provide additional help.
+Some sample code can be found on the [Examples](examples/) page. For questions not covered in the documenation, the [Open Hub API forum](http://www.openhub.net/forums/3492) can provide additional help.
 
-Send bug reports to info@ohloh.net.
+Send bug reports to info@openhub.net.
 
 ## Table of Contents
 + [Lookup By Email](email_lookup.md)
@@ -41,35 +41,35 @@ Send bug reports to info@ohloh.net.
 
 ## Terms of Use
 
-The Ohloh API has some restrictions. Please review the complete [Terms of Use](http://meta.ohloh.net/terms-2/) before you begin.
+The Ohloh API has some restrictions. Please review the complete [Terms of Use](http://blog.openhub.net/terms-2/) before you begin.
 
-We ask that you cite Ohloh in publications that use our data. Please include a link to http://www.ohloh.net on your web pages.
+We ask that you cite Open Hub in publications that use our data. Please include a link to http://www.openhub.net on your web pages.
 
 Our terms require you to provide a link back to our site. While you’re free to use any method you’d prefer, we’ve provided this small button for your convenience: ![Ohloh Button](https://www.ohloh.net/images/badges/mini.gif)
 
 We recommend linking to our home page. The following html will link the small badge to our home page:
 
 ```html
-<a href ="http://www.ohloh.net"><img src="http://www.ohloh.net/images/badges/mini.gif" width="80" height="15" /></a>
+<a href ="http://www.openhub.net"><img src="http://www.openhub.net/images/badges/mini.gif" width="80" height="15" /></a>
 ```
 
 ## API Key
 
-Before you can access the Ohloh API, you must [register your application](https://www.ohloh.net/accounts/me/api_keys/new) and obtain an API key. Bandwidth will initially be limited to 1,000 requests per API key per day.
+Before you can access the Ohloh API, you must [register your application](https://www.openhub.net/accounts/me/api_keys/new) and obtain an API key. Bandwidth will initially be limited to 1,000 requests per API key per day.
 
 An API Key should be unique to each application that accesses the Ohloh API. You can register up to five applications.
 
-It is important not to share API keys. In order to access or modify account data, your application must be granted permission by an individual Ohloh account holder. This permission is granted on a per-key basis.
+It is important not to share API keys. In order to access or modify account data, your application must be granted permission by an individual Open Hub account holder. This permission is granted on a per-key basis.
 
-You can [register a new application](https://www.ohloh.net/accounts/me/api_keys/new) or [view the status](http://www.ohloh.net/accounts/me/api_keys) of your existing applications online.
+You can [register a new application](https://www.openhub.net/accounts/me/api_keys/new) or [view the status](http://www.openhub.net/accounts/me/api_keys) of your existing applications online.
 
-If you have special requirements for additional keys, or if you are interested in building a large-scale application, please contact us at info@ohloh.net.
+If you have special requirements for additional keys, or if you are interested in building a large-scale application, please contact us at info@openhub.net.
 
 ## OAuth Impersonation
 
-The standard Ohloh API allows read-only access to Ohloh data.
+The standard Ohloh API allows read-only access to Open Hub data.
 
-Using OAuth, you can impersonate an Ohloh account while accessing the Ohloh API. This enables you to write to the Ohloh database, and also to access or modify private account information. You must first be granted permission to do this by an Ohloh account holder.
+Using OAuth, you can impersonate an Open Hub account while accessing the Ohloh API. This enables you to write to the Open Hub database, and also to access or modify private account information. You must first be granted permission to do this by an Open Hub account holder.
 
 You can read more at [Using OAuth with the Ohloh API](examples/oauth#using-oauth-with-the-ohloh-api).
 
@@ -77,17 +77,17 @@ You can read more at [Using OAuth with the Ohloh API](examples/oauth#using-oauth
 
 The Ohloh API returns XML-formatted data in response to HTTP GET requests.
 
-The design concept is that for each web page on Ohloh, there may be an equivalent XML-formatted version of the page. Currently, only a small subset of the Ohloh site is available as XML, but more data will become available over time.
+The design concept is that for each web page on Open Hub, there may be an equivalent XML-formatted version of the page. Most pages on the Black Duck Open Hub have an XML representation.
 
 You must do three things to receive an XML-formatted response:
 
-1. Append a `.xml` extension to the basic URL. For example, instead of `http://www.ohloh.net/projects/1`, which returns an HTML page, you would request `http://www.ohloh.net/projects/1.xml`.
+1. Append a `.xml` extension to the basic URL. For example, instead of `http://www.openhub.net/projects/1`, which returns an HTML page, you would request `http://www.openhub.net/projects/1.xml`.
 2. Provide your API Key as an HTTP parameter. Your request will be forbidden without a valid `api_key`.
 
 For example, to view the project with ID=1 as XML, using an example API key, the complete URL would be:
 
 ```
-http://www.ohloh.net/projects/1.xml?api_key=01234567890123456789
+http://www.openhub.net/projects/1.xml?api_key=01234567890123456789
 ```
 
 For the sake of brevity, the `api_key` parameter will be omitted from the examples in this documentation. Remember to always include it in your actual queries.
@@ -160,7 +160,7 @@ Details about this project response can be found in the Ohloh API Reference [pro
 For example, to get the second page of projects containing “java” or “Java” in their titles, descriptions, or tags, you would request:
 
 ```
-GET http://www.ohloh.net/projects.xml?query=java&page=2
+GET http://www.openhub.net/projects.xml?query=java&page=2
 ```
 
 ### Collection Response XML Format
@@ -171,7 +171,7 @@ Some results will contain a collection of values. When this happens, the `<respo
 + __items_available__ - The total number of database items matching the query, including those already returned.
 + __first_item_position__ - The zero-based index of the first item returned
 
-For example, the response to `http://www.ohloh.net/projects.xml` might begin:
+For example, the response to `http://www.openhub.net/projects.xml` might begin:
 
 ```xml
 <response>
@@ -187,4 +187,4 @@ For example, the response to `http://www.ohloh.net/projects.xml` might begin:
 ```
 
 - - -
-Copyright 2013 Black Duck Software, Inc. Unless otherwise marked, this work is licensed under a [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/).
+Copyright 2014 Black Duck Software, Inc. Unless otherwise marked, this work is licensed under a [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/).
