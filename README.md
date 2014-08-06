@@ -2,7 +2,7 @@
 
 ## Welcome
 
-The Ohloh API is a free, REST-based programming interface to the Open Hub open source directory. You can use the Ohloh API to create your own applications and web services based on Open Hub data.
+The Ohloh API is a free, REST-based programming interface to the Black Duck Open Hub open source directory. You can use the Ohloh API to create your own applications and web services based on Open Hub data.
 
 ## Getting Help
 
