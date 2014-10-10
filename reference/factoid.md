@@ -25,13 +25,13 @@ An integer from -3 to +3 which rates the relative severity of the factoid. Negat
 ### URL
 To get a single Factoid:
 ```shell
-curl http://www.ohloh.net/projects/{project_id}/factoids/{factoid_id}.xml
+curl https://www.openhub.net/projects/{project_id}/factoids/{factoid_id}.xml
 ```
 
 ### Collection URL
 To get a list of all current Factoids for a particular Project:
 ```shell
-curl http://www.ohloh.net/projects/{project_id}/factoids.xml 
+curl https://www.openhub.net/projects/{project_id}/factoids.xml 
 ```
 The collection request does not support any filtering, sorting or paging. You will always receive the entire collection of factoids, ordered by descending priority.
 

@@ -41,14 +41,14 @@ ContributorFacts only exist after Ohloh has downloaded and analyzed the project 
 ### URL
 To get a single ContributorFact based on the latest Analysis for a Project:
 ```shell
-curl http://www.ohloh.net/projects/{project_id}/contributors/{contributor_id}.xml 
+curl https://www.openhub.net/projects/{project_id}/contributors/{contributor_id}.xml
 ```
 This ContributorFact will include within it a collection of [ContributorLanguageFacts](/reference/contributor_language_fact.md) covering statistics for individual languages.
 
 ### Collection URL
 To get a list of all ContributorFacts based on the lastest Analysis for a Project:
 ```shell
-curl http://www.ohloh.net/projects/{project_id}/contributors.xml 
+curl https://www.openhub.net/projects/{project_id}/contributors.xml 
 ```
 ContributorFacts returned from this call will not include ContributorLanguageFacts. Those can be obtained by retrieving ContributorFacts individually only.
 

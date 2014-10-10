@@ -73,7 +73,7 @@ A Project represents a collection of source code, documentation, and web sites t
         - @id The Ohloh language id.
 
 ```xml
-<languages graph_url="http://ohloh.net/p/firefox/analyses/9239902/languages.png">
+<languages graph_url="https://openhub.net/p/firefox/analyses/9239902/languages.png">
   <language color="F35F1F" percentage="40" id="44">C++</language>
   <language color="FF8F00" percentage="19" id="42">C</language>
   <language color="A4007E" percentage="14" id="6">JavaScript</language>
@@ -119,13 +119,13 @@ A Project represents a collection of source code, documentation, and web sites t
 ### URL
 To get a single Project, including its current best Analysis:
 ```shell
-curl http://www.ohloh.net/projects/{project_id}.xml 
+curl https://www.openhub.net/projects/{project_id}.xml 
 ```
 
 ### Collection URL
 To get a list of all Projects, not including their Analyses:
 ```shell
-curl http://www.ohloh.net/projects.xml 
+curl https://www.openhub.net/projects.xml 
 ```
 The Project collection request supports the standard [collection request parameters](/README.md#collection-requests), with the following details:
 

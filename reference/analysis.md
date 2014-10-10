@@ -60,7 +60,7 @@ The Analysis object described here contains only a few top-level metrics. Detail
         - @id The Ohloh language id.
 
 ```xml
-<languages graph_url="http://ohloh.net/p/firefox/analyses/9239902/languages.png">
+<languages graph_url="https://openhub.net/p/firefox/analyses/9239902/languages.png">
   <language color="F35F1F" percentage="40" id="44">C++</language>
   <language color="FF8F00" percentage="19" id="42">C</language>
   <language color="A4007E" percentage="14" id="6">JavaScript</language>
@@ -72,10 +72,10 @@ The Analysis object described here contains only a few top-level metrics. Detail
 ### URL
 To get a particular Analysis for a single Project:
 ```shell
-curl http://www.ohloh.net/projects/{project_id}/analyses/{analysis_id}.xml 
+curl https://www.openhub.net/projects/{project_id}/analyses/{analysis_id}.xml
 ```
 
 A shortcut to the current best Analysis for a single Project can be made by substituting `latest` for the analysis ID:
 ```shell
-curl http://www.ohloh.net/projects/{project_id}/analyses/latest.xml 
+curl https://www.openhub.net/projects/{project_id}/analyses/latest.xml 
 ```

@@ -17,13 +17,13 @@ Once added to the Ohloh database, a Repository is permanent. However, Enlistment
 ### URL
 To get a single Enlistment
 ```shell
-curl GET http://www.ohloh.net/projects/{project_id}/enlistments/{enlistment_id}.xml
+curl GET https://www.openhub.net/projects/{project_id}/enlistments/{enlistment_id}.xml
 ```
 
 ### Collection URL
 To get a list of all enlistments for a particular project:
 ``` shell
-curl http://www.ohloh.net/projects/{project_id}/enlistments.xml
+curl https://www.openhub.net/projects/{project_id}/enlistments.xml
 ```
 
 The Enlistment collection method supports the standard [collection request parameters](/README.md#collection-requests) with the following details:
