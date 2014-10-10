@@ -29,6 +29,7 @@ Send bug reports to info@openhub.net.
     - [KudoScore](reference/kudo_score.md)
     - [Language](reference/language.md)
     - [Message](reference/message.md)
+	- [Organization](reference/organization.md)
     - [Position](reference/position.md)
     - [Project](reference/project.md)
     - [Repository](reference/repository.md)
