@@ -32,7 +32,7 @@
     Ohloh API keys are free. If you do not have one, you can obtain one
     at the Ohloh website:
 
-     http://www.ohloh.net/accounts/<your_login>/api_keys/new
+     https://www.openhub.net/accounts/<your_login>/api_keys/new
 
     Pass the email address of the account as the second parameter to this script.
 */
@@ -69,7 +69,7 @@ public class ApiExample
         try
         {
             // Request XML file.
-            URL url = new URL("http://www.ohloh.net/accounts/" + emailDigest + ".xml?api_key=" + apiKey + "&v=1");
+            URL url = new URL("https://www.openhub.net/accounts/" + emailDigest + ".xml?api_key=" + apiKey + "&v=1");
             URLConnection con = url.openConnection();
 
             // Check for status OK.

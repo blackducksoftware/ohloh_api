@@ -11,7 +11,7 @@ CALLBACK_URL = 'http://localhost:4567/info'
 # variables to values from your API keys page.
 before do
   @consumer = OAuth::Consumer.new(ENV['OHLOH_KEY'], ENV['OHLOH_SECRET'],
-                                  {:site => 'https://www.ohloh.net',
+                                  {:site => 'https://www.openhub.net',
                                   :token_url => "/oauth/access_token"})
 end
 

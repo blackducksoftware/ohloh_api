@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require 'net/http'
+require 'net/https'
 require 'rexml/document'
 require 'digest/md5'
 
@@ -42,7 +42,7 @@ require 'digest/md5'
 # Ohloh API keys are free. If you do not have one, you can obtain one
 # at the Ohloh website:
 #
-#     http://www.ohloh.net/accounts/<your_login>/api_keys/new
+#     https://www.openhub.net/accounts/<your_login>/api_keys/new
 #
 # Pass the email address of the account as the second parameter to this script.
 
@@ -60,7 +60,11 @@ email = ARGV[1]
 
 # We pass the MD5 hash of the email address
 email_md5 = Digest::MD5.hexdigest(email).to_s
-response = Net::HTTP.get_response("www.ohloh.net", "/accounts/#{email_md5}.xml?v=1&api_key=#{api_key}", 80)
+
+uri = URI("https://www.openhub.net/accounts/#{email_md5}.xml?v=1&api_key=#{api_key}")
+http = Net::HTTP.new(uri.host, uri.port)
+http.use_ssl = true
+response = http.get(uri.request_uri)
 
 # HTTP OK?
 if response.code != '200'
