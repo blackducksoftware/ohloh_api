@@ -31,6 +31,7 @@ Send bug reports to info@openhub.net.
     - [Language](reference/language.md)
     - [Message](reference/message.md)
     - [Organization](reference/organization.md)
+    - [Organization-collection](reference/organization-collection.md)
     - [OutsideCommitters](reference/outside_committers.md)
     - [OutsideProjects](reference/outside_projects.md)
     - [PortfolioProjects](reference/portfolio_projects.md)
