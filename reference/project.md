@@ -98,6 +98,22 @@ A Project represents a collection of source code, documentation, and web sites t
   </licenses>
 ```
 
++ __project_activity_index__
+    Project Activity Idex are intended to be an easy way to understand project activity at a glance.
+    - __value__
+    A numerical value of the Hotness Score
+    - __description__
+    A descriptive text of Project Activity Idex i.e. Very High, High, Low
+
+
+```xml
+    <project_activity_index>
+      <value>70</value>
+      <description>Very High</description>
+    </project_activity_index>
+```
+
+
 + __links__
     The links associated with the current project. Homepage and Download links are not included here.
     - __category__
