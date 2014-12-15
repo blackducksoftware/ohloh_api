@@ -88,7 +88,6 @@ A Project represents a collection of source code, documentation, and web sites t
     - __nice_name__
     A human-friendly name of the License
 
-
 ```xml
   <licenses>
     <license>
@@ -96,6 +95,28 @@ A Project represents a collection of source code, documentation, and web sites t
       <nice_name>MIT License</nice_name>
     </license>
   </licenses>
+```
+
++ __project_activity_index__
+    The Project Activity Index (PAI) level
+    - __value__
+    The numerical value for the activity level.  The values may be one of
+        + 0 (NA)
+        + 10 (New)
+        + 20 (Inactive)
+        + 30 (Very Low)
+        + 40 (Low)
+        + 50 (Moderate)
+        + 60 (High)
+        + 70 (Very High)
+    - __description__
+    The text description of the value as defined above
+
+```xml
+<project_activity_index>
+  <value>70</value>
+  <description>Very High</description>
+</project_activity_index>
 ```
 
 + __links__
