@@ -14,7 +14,7 @@ Send bug reports to info@openhub.net.
 
 ## Table of Contents
 + [Lookup By Email](email_lookup.md)
-+ [Using OAuth with the Ohloh API](examples/oauth)
++ [Using OAuth with the Ohloh API](examples/oauth2)
 + [Examples](examples/)
 + Ohloh API Reference
     - [Account](reference/account.md)
@@ -77,7 +77,7 @@ The standard Ohloh API allows read-only access to Open Hub data.
 
 Using OAuth, you can impersonate an Open Hub account while accessing the Ohloh API. This enables you to write to the Open Hub database, and also to access or modify private account information. You must first be granted permission to do this by an Open Hub account holder.
 
-You can read more at [Using OAuth with the Ohloh API](examples/oauth#using-oauth-with-the-ohloh-api).
+You can read more at [Using OAuth with the Ohloh API](examples/oauth2#using-oauth-20).
 
 ## Forming a Request
 
