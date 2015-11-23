@@ -17,7 +17,9 @@ A Project represents a collection of source code, documentation, and web sites t
 + __download_url__
     An optional URL to a website hosting project downloads.
 + __url_name__
-    A short, unique name for this project. This name is used in Ohloh URLs.
+    *Depricated* A short, unique name for this project. This name is used in Ohloh URLs.  *This field will be removed in a future release*
++ __vanity_name__
+    A short, unique name for this project.  This name is used in Open Hub project URLs.
 + __medium_logo_url__
     An url to the project’s 64×64 pixels logo image.
 + __small_logo_url__
