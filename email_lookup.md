@@ -9,7 +9,8 @@ This is useful if you know someone’s email address, but do not know the Ohloh 
 For example, here’s how to find the account data for `robin@openhub.net`:
 + Generate the MD5 hash for `robin@openhub.net`. From a bash command prompt you can do this simply:
 ```shell
-$ md5 -q -s robin@openhub.net 63f26c4a00677ea1e8b14d2a56efb104
+$ md5 -q -s robin@openhub.net 
+63f26c4a00677ea1e8b14d2a56efb104
 ```
 
 + Pass this hash in place of the account ID in the normal http request:
