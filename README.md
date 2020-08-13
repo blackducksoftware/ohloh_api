@@ -8,7 +8,7 @@ The Ohloh API is a free, REST-based programming interface to the Black Duck Open
 
 This page contains important summary information to help you get started. In-depth online documentation is available, linked by the table of contents below.
 
-Some sample code can be found on the [Examples](examples/) page. For questions not covered in the documenation, the [Open Hub API forum](https://www.openhub.net/forums/3492) can provide additional help.
+Some sample code can be found on the [Examples](examples/) page. For questions not covered in the documenation, the [Open Hub Technical Issues Help](https://community.synopsys.com/s/topic/0TO2H000000gHS1WAM/black-duck-open-hub-help) can provide additional help.
 
 Send bug reports to info@openhub.net.
 
@@ -47,11 +47,11 @@ Send bug reports to info@openhub.net.
 
 ## Terms of Use
 
-The Ohloh API has some restrictions. Please review the complete [Terms of Use](http://blog.openhub.net/terms-2/) before you begin.
+The Ohloh API has some restrictions. Please review the complete [Terms of Use](https://community.synopsys.com/s/article/Black-Duck-Open-Hub-API-Use-Agreement) before you begin.
 
 We ask that you cite Open Hub in publications that use our data. Please include a link to https://www.openhub.net on your web pages.
 
-Our terms require you to provide a link back to our site. While you’re free to use any method you’d prefer, we’ve provided this small button for your convenience: ![Ohloh Button](https://www.openhub.net/images/badges/mini.gif)
+Our terms require you to provide a link back to our site. While you’re free to use any method you’d prefer, we’ve provided this small button for your convenience: ![Open Hub Button](https://www.openhub.net/images/badges/mini.gif)
 
 We recommend linking to our home page. The following html will link the small badge to our home page:
 
@@ -193,4 +193,4 @@ For example, the response to `https://www.openhub.net/projects.xml` might begin:
 ```
 
 - - -
-Copyright 2014 Black Duck Software, Inc. Unless otherwise marked, this work is licensed under a [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/).
+Copyright 202 Synopsys, Inc. Unless otherwise marked, this work is licensed under a [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/).
