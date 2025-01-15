@@ -24,7 +24,7 @@
     This is an example of using the Open Hub API from Java.
     Detailed information can be found at the Open Hub website:
 
-    https://github.com/blackducksw/ohloh_api
+    https://github.com/blackducksoftware/ohloh_api
 
     This examples retrieves a account and simply shows the name associated.
 

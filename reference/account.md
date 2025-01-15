@@ -52,7 +52,7 @@ The unique ID for the Account.
     Floating-point values representing the account’s latitude and longitude, suitable for use with the Google Maps API. They are available only when the account has specified a valid location.
 
 + __kudo_score__
-If this account has a KudoScore, it will appear here. New accounts may not have a KudoScore. The Open Hub seb site displays these accounts with a default KudoRank of 1.
+If this account has a KudoScore, it will appear here. New accounts may not have a KudoScore. The Open Hub web site displays these accounts with a default KudoRank of 1.
 
 + __languages__
     Only available when requesting an accounts details, this node will not be returned as part of a search result list. This node contains the total language experience for this account grouped by language.Eachnode contains the following children:

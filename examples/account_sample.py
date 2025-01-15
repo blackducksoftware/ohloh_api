@@ -29,7 +29,7 @@ This is an example of using the Open Hub API from Python.
 
 Detailed information can be found on GitHub:
 
-     https://github.com/blackducksw/ohloh_api
+     https://github.com/blackducksoftware/ohloh_api
 
 This example uses the ElementTree library for XML parsing
 (included in Python 2.5 and newer):

@@ -28,7 +28,7 @@ require 'digest/md5'
 # This is an example of using the Open Hub API from Ruby.
 # Detailed information can be found at the Open Hub website:
 #
-#     https://github.com/blackducksw/ohloh_api
+#     https://github.com/blackducksoftware/ohloh_api
 #
 # This example uses the REXML library for XML parsing:
 #

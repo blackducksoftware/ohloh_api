@@ -25,7 +25,7 @@
 # This is an example of using the Open Hub API from Bash.
 # Detailed information can be found on GitHub:
 #
-#     https://github.com/blackducksw/ohloh_api
+#     https://github.com/blackducksoftware/ohloh_api
 #
 
 # This example retrieves basic Open Hub account information

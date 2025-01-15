@@ -16,7 +16,7 @@ This is a small example of how to use the Open Hub API from Perl,
 mimicking the Ruby example - account_sample.rb
 
 Detailed information about the Open Hub API can be found at
-https://github.com/blackducksw/ohloh_api
+https://github.com/blackducksoftware/ohloh_api
 
 The script takes an API key and the email address of a developer
 registered on Open Hub as parameters, and prints out all the
