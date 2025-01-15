@@ -16,12 +16,12 @@ The Analysis object described here contains only a few top-level metrics. Detail
     The unique ID of the Project measured by this Analysis.
 + __updated_at__
     The time at which this Analysis record was last modified.
-+ __logged_at__
-    The time at which Ohloh queried the source control system for the source code measured by this Analysis. All commits which occured at or before this time are included. Note that the Analysis might also include some activity after this time if the project includes many [Repositories](/reference/repository.md), because not all Repositories are updated at the same time. The logged_at time is the most pessimistic time among all the Repositories included in the Project.
++ __oldest_code_set_time__
+    The time at which Open Hub queried the source control system for the source code measured by this Analysis. All commits which occured at or before this time are included. Note that the Analysis might also include some activity after this time if the project includes many [Repositories](/reference/repository.md), because not all Repositories are updated at the same time. The logged_at time is the most pessimistic time among all the Repositories included in the Project.
 + __min_month__
-    Ohloh groups most historical statistics ([ActivityFacts](/reference/activity_fact.md) and [SizeFacts](/reference/size_fact.md)) into monthly totals. min_month indicates the first month for which Ohloh has monthly historical statistics available for this project. This is typically the date of the first project commit, truncated to the beginning of its calendar month. Only the year and month fields are significant.
+    Open Hub groups most historical statistics ([ActivityFacts](/reference/activity_fact.md) and [SizeFacts](/reference/size_fact.md)) into monthly totals. min_month indicates the first month for which Open Hub has monthly historical statistics available for this project. This is typically the date of the first project commit, truncated to the beginning of its calendar month. Only the year and month fields are significant.
 + __max_month__
-    The last month for which monthly historical statistics are available for this project. Depending on when this analysis was prepared, max_month usually refers to the current month, but it may be slightly older. Only the year and month fields are significant. Ohloh’s monthly statistics for max_month are usually smaller than other months because the complete month has not yet elapsed, and it reflects ongoing development work.
+    The last month for which monthly historical statistics are available for this project. Depending on when this analysis was prepared, max_month usually refers to the current month, but it may be slightly older. Only the year and month fields are significant. Open Hub’s monthly statistics for max_month are usually smaller than other months because the complete month has not yet elapsed, and it reflects ongoing development work.
 + __twelve_month_contributor_count__
     The number of contributors who made at least one commit to the project source code in the twelve months leading up to and including `max_month`.
 + __total_contributor_count__
@@ -53,11 +53,11 @@ The Analysis object described here contains only a few top-level metrics. Detail
     - _@graph_url_
     This is the url to the PNG image that depicts the language breakdown for the current Analysis. The colors referenced in each languages @color attribute will be used in this image.
     - _language_
-    Not every language will have a entry. Ohloh will will combine languages that do not make up a significant percentage into a aggregate entry “N Other”. This entry can be identified by either its @color, always “000000″ or @id, always “”.
+    Not every language will have a entry. Open Hub will will combine languages that do not make up a significant percentage into a aggregate entry “N Other”. This entry can be identified by either its @color, always “000000″ or @id, always “”.
     Each language will contain the following data
-        - @color The color code that Ohloh uses to represent this language on the website. This color is also used in the language breakdown graph image.
+        - @color The color code that Open Hub uses to represent this language on the website. This color is also used in the language breakdown graph image.
         - @percentage The percentage of lines of code that the current language represents in the current Analysis
-        - @id The Ohloh language id.
+        - @id The Open Hub language id.
 
 ```xml
 <languages graph_url="https://openhub.net/p/firefox/analyses/9239902/languages.png">
@@ -72,10 +72,10 @@ The Analysis object described here contains only a few top-level metrics. Detail
 ### URL
 To get a particular Analysis for a single Project:
 ```shell
-curl https://www.openhub.net/projects/{project_id}/analyses/{analysis_id}.xml
+curl https://www.openhub.net/p/{project_id}/analyses/{analysis_id}.xml
 ```
 
 A shortcut to the current best Analysis for a single Project can be made by substituting `latest` for the analysis ID:
 ```shell
-curl https://www.openhub.net/projects/{project_id}/analyses/latest.xml 
+curl https://www.openhub.net/p/{project_id}/analyses/latest.xml 
 ```

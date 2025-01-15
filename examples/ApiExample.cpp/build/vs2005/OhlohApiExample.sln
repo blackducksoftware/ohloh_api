@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OhlohApiExample", "OhlohApiExample.vcproj", "{EA66C001-B006-4DBA-9542-A5E887BA420C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenHubApiExample", "OpenHubApiExample.vcproj", "{EA66C001-B006-4DBA-9542-A5E887BA420C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

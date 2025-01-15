@@ -1,5 +1,5 @@
 ## Position
-A position represents a contribution or series of contributions that an account holder has made to a project within Ohloh. It corresponds to a committer ID for a source code repository for a particular project.
+A position represents a contribution or series of contributions that an account holder has made to a project within Open Hub. It corresponds to a committer ID for a source code repository for a particular project.
 
 ### Properties
 
@@ -8,11 +8,9 @@ A position represents a contribution or series of contributions that an account 
 + __organization__
     An optional field that contains the organization name for this position. This field will be filled in if the account holder has designated that this position’s contributions were made on behalf of an organization. Example: “IBM Corporation”.
 + __html_url__
-    The url to the contributor page on Ohloh.
+    The url to the contributor page on Open Hub.
 + __created_at__
-    The time at which this Position was originally created on Ohloh.
-+ __updated_at__
-    The time at which this Position record was last modified.
+    The time at which this Position was originally created on Open Hub.
 + __started_at__
     Optional field that contains the time at which this position was started. This field may be filled in by the account holder if this position is not backed by commits (e.g. the user contributed documentation to the projects wiki or authored and submitted a patch committed by a project maintainer).
 + __ended_at__

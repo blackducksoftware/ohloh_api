@@ -25,8 +25,8 @@ require 'digest/md5'
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-# This is an example of using the Ohloh API from Ruby.
-# Detailed information can be found at the Ohloh website:
+# This is an example of using the Open Hub API from Ruby.
+# Detailed information can be found at the Open Hub website:
 #
 #     https://github.com/blackducksw/ohloh_api
 #
@@ -35,12 +35,12 @@ require 'digest/md5'
 #     http://www.germane-software.com/software/rexml/
 #
 
-# This example retrieves basic Ohloh account information
+# This example retrieves basic Open Hub account information
 # and outputs it as simple name: value pairs.
 #
-# Pass your Ohloh API key as the first parameter to this script.
-# Ohloh API keys are free. If you do not have one, you can obtain one
-# at the Ohloh website:
+# Pass your Open Hub API key as the first parameter to this script.
+# Open Hub API keys are free. If you do not have one, you can obtain one
+# at the Open Hub website:
 #
 #     https://www.openhub.net/accounts/<your_login>/api_keys/new
 #
@@ -55,7 +55,7 @@ api_key = ARGV[0]
 email = ARGV[1]
 
 #
-# Connect to the Ohloh website and retrieve the account data.
+# Connect to the Open Hub website and retrieve the account data.
 #
 
 # We pass the MD5 hash of the email address
@@ -75,7 +75,7 @@ end
 # Parse the response into a structured XML object
 xml = REXML::Document.new(response.body)
 
-# Did Ohloh return an error?
+# Did Open Hub return an error?
 error = xml.root.get_elements('/response/error').first
 if error
   STDERR.puts "#{error.text}"

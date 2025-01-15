@@ -8,7 +8,7 @@ The ContributorLanguageFact is very similar to a [ContributorFact](/reference/co
 
 A ContributorLanguageFact is part of an Analysis, and is derived from lower-level statistics contained within the [Analysis](/reference/analysis.md). New ContributorLanguageFacts are created for each Project contributor whenever a new Analysis is created for the Project.
 
-ContributorLanguageFacts only exist after Ohloh has downloaded and analyzed the project source code.
+ContributorLanguageFacts only exist after Open Hub has downloaded and analyzed the project source code.
 
 ### Properties
 
@@ -23,7 +23,7 @@ ContributorLanguageFacts only exist after Ohloh has downloaded and analyzed the 
 + __language_nice_name__
     The `nice_name` of the Language measured.
 + __comment_ratio__
-    The fraction of new lines added by this contributor in this language which are comments. Note that Ohloh does not track the net lines of current code attributable to an specific individual. This statistic merely sums over all new lines added, and does not consider whether the added lines were later removed by this contributor or any other.
+    The fraction of new lines added by this contributor in this language which are comments. Note that Open Hub does not track the net lines of current code attributable to an specific individual. This statistic merely sums over all new lines added, and does not consider whether the added lines were later removed by this contributor or any other.
 + __man_months__
     The total number of calendar months in which this contributor made at least one commit using this Language. Months in which there was no activity in this Language for this contributor are not counted.
 + __commits__
@@ -32,6 +32,6 @@ ContributorLanguageFacts only exist after Ohloh has downloaded and analyzed the 
 ### Collection URL
 To get a list of all ContributorLanguageFacts for a particular contributor, based on the lastest Analysis for a Project:
 ```shell
-curl https://www.openhub.net/projects/{project_id}/contributors/{contributor_id}.xml
+curl https://www.openhub.net/p/{project_id}/contributors/{contributor_id}.xml
 ```
 This is the same URL used to obtain a [ContributorFact](/reference/contributor_fact.md). The ContributorFact returned by this call will include within it a collection of ContributorLanguageFacts.

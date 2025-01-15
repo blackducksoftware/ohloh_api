@@ -1,7 +1,7 @@
 ## Enlistment
-An Enlistment joins a [Project](/reference/project.md) to a source control [Repository](/reference/repository.md).
+An Enlistment joins a [Project](/reference/project.md) to a source control [Code Location](/reference/code_location.md).
 
-Once added to the Ohloh database, a Repository is permanent. However, Enlistments to that Repository may be added or removed at any time. Many Projects may share a single Repository.
+Once added to the Open Hub database, a Code Location is permanent. However, Enlistments to that Code Location may be added or removed at any time. Many Projects may share a single CodeLocation.
 
 ### Properties
 
@@ -9,10 +9,8 @@ Once added to the Ohloh database, a Repository is permanent. However, Enlistment
     The unique ID of the Enlistment.
 + __project_id__
     The unique ID of the [Project](/reference/project.md).
-+ __repository_id__
-    The unique ID of the [Repository](/reference/repository.md).
-+ __repository__
-    The [Repository](/reference/repository.md) record will be included in full here. 
++ __code_location__
+    The [Code Location](/reference/code_location.md) record will be included in full here. 
 
 ### URL
 To get a single Enlistment
@@ -29,7 +27,7 @@ curl https://www.openhub.net/p/{project_id}/enlistments.xml
 The Enlistment collection method supports the standard [collection request parameters](/README.md#collection-requests) with the following details:
 
 + __query__
-    If supplied, enlistments with a repository URL matching the query string will be returned.
+    If supplied, enlistments with a code_location URL matching the query string will be returned.
 + __sort__
     Enlistment collections support the following sort options:
     - __module_name__

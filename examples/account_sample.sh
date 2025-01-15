@@ -22,18 +22,18 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-# This is an example of using the Ohloh API from Bash.
+# This is an example of using the Open Hub API from Bash.
 # Detailed information can be found on GitHub:
 #
 #     https://github.com/blackducksw/ohloh_api
 #
 
-# This example retrieves basic Ohloh account information
+# This example retrieves basic Open Hub account information
 # and outputs it as simple name: value pairs.
 #
-# Pass your Ohloh API key as the first parameter to this script.
-# Ohloh API keys are free. If you do not have one, you can obtain one
-# at the Ohloh website:
+# Pass your Open Hub API key as the first parameter to this script.
+# Open Hub API keys are free. If you do not have one, you can obtain one
+# at the Open Hub website:
 #
 #     https://www.openhub.net/accounts/<your_login>/api_keys/new
 #
@@ -50,11 +50,11 @@ API_KEY=$1
 echo $2 | grep -q -E -e'.+@.+\..+' || usage
 EMAIL_MD5=`echo -n $2 | openssl md5 | cut -f2 -d" "`
 
-# Pass the MD5 hash of the email address to Ohloh.
+# Pass the MD5 hash of the email address to Open Hub.
 # A quick-and-dirty sed filter converts the XML response to name:value pairs
 #
-# We use the --fail option so that curl will return a non-zero exit status if Ohloh returns an error.
-# This also means that the error message text returned from Ohloh will be suppressed from the output.
+# We use the --fail option so that curl will return a non-zero exit status if Open Hub returns an error.
+# This also means that the error message text returned from Open Hub will be suppressed from the output.
 curl --fail -s "https://www.openhub.net/accounts/$EMAIL_MD5.xml?v=1&api_key=$API_KEY" | sed -n 's/ *<\(.*\)>\(.*\)<\/\1>$/\1: \2/ p'
 
 # Forward along the exit status from curl

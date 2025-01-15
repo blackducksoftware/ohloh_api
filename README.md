@@ -1,22 +1,22 @@
-# Ohloh API Documentation
+# Open Hub API Documentation
 
 ## Welcome
 
-The Ohloh API is a free, REST-based programming interface to the Black Duck Open Hub open source directory. You can use the Ohloh API to create your own applications and web services based on Open Hub data.
+The Open Hub API is a free, REST-based programming interface to the Black Duck Open Hub open source directory. You can use the Open Hub API to create your own applications and web services based on Open Hub data.
 
 ## Getting Help
 
 This page contains important summary information to help you get started. In-depth online documentation is available, linked by the table of contents below.
 
-Some sample code can be found on the [Examples](examples/) page. For questions not covered in the documenation, the [Open Hub Technical Issues Help](https://community.synopsys.com/s/topic/0TO2H000000gHS1WAM/black-duck-open-hub-help) can provide additional help.
+Some sample code can be found on the [Examples](examples/) page. For questions not covered in the documenation, the [Open Hub Technical Issues Help](https://community.blackduck.com/s/topic/0TO2H000000gHS1WAM/black-duck-open-hub-help) can provide additional help.
 
 Send bug reports to info@openhub.net.
 
 ## Table of Contents
 + [Lookup By Email](email_lookup.md)
-+ [Using OAuth with the Ohloh API](examples/oauth2)
++ [Using OAuth with the Open Hub API](examples/oauth2)
 + [Examples](examples/)
-+ Ohloh API Reference
++ Open Hub API Reference
     - [Account](reference/account.md)
     - [Account News](reference/news.md)
     - [ActivityFact](reference/activity_fact.md)
@@ -47,7 +47,7 @@ Send bug reports to info@openhub.net.
 
 ## Terms of Use
 
-The Ohloh API has some restrictions. Please review the complete [Terms of Use](https://community.synopsys.com/s/article/Black-Duck-Open-Hub-API-Use-Agreement) before you begin.
+The Open Hub API has some restrictions. Please review the complete [Terms of Use](https://community.blackduck.com/s/article/Black-Duck-Open-Hub-API-Use-Agreement) before you begin.
 
 We ask that you cite Open Hub in publications that use our data. Please include a link to https://www.openhub.net on your web pages.
 
@@ -61,9 +61,9 @@ We recommend linking to our home page. The following html will link the small ba
 
 ## API Key
 
-Before you can access the Ohloh API, you must [register your application](https://www.openhub.net/accounts/me/api_keys/new) and obtain an API key. Bandwidth will initially be limited to 1,000 requests per API key per day.
+Before you can access the Open Hub API, you must [register your application](https://www.openhub.net/accounts/me/api_keys/new) and obtain an API key. Bandwidth will initially be limited to 1,000 requests per API key per day.
 
-An API Key should be unique to each application that accesses the Ohloh API. You can register up to five applications.
+An API Key should be unique to each application that accesses the Open Hub API. You can register up to five applications.
 
 It is important not to share API keys. In order to access or modify account data, your application must be granted permission by an individual Open Hub account holder. This permission is granted on a per-key basis.
 
@@ -73,32 +73,32 @@ If you have special requirements for additional keys, or if you are interested i
 
 ## OAuth Impersonation
 
-The standard Ohloh API allows read-only access to Open Hub data.
+The standard Open Hub API allows read-only access to Open Hub data.
 
-Using OAuth, you can impersonate an Open Hub account while accessing the Ohloh API. This enables you to write to the Open Hub database, and also to access or modify private account information. You must first be granted permission to do this by an Open Hub account holder.
+Using OAuth, you can impersonate an Open Hub account while accessing the Open Hub API. This enables you to write to the Open Hub database, and also to access or modify private account information. You must first be granted permission to do this by an Open Hub account holder.
 
-You can read more at [Using OAuth with the Ohloh API](examples/oauth2#using-oauth-20).
+You can read more at [Using OAuth with the Open Hub API](examples/oauth2#using-oauth-20).
 
 ## Forming a Request
 
-The Ohloh API returns XML-formatted data in response to HTTP GET requests.
+The Open Hub API returns XML-formatted data in response to HTTP GET requests.
 
 The design concept is that for each web page on Open Hub, there may be an equivalent XML-formatted version of the page. Most pages on the Black Duck Open Hub have an XML representation.
 
 You must do three things to receive an XML-formatted response:
 
-1. Append a `.xml` extension to the basic URL. For example, instead of `https://www.openhub.net/projects/1`, which returns an HTML page, you would request `https://www.openhub.net/projects/1.xml`.
+1. Append a `.xml` extension to the basic URL. For example, instead of `https://www.openhub.net/p/1`, which returns an HTML page, you would request `https://www.openhub.net/p/1.xml`.
 2. Provide your API Key as an HTTP parameter. Your request will be forbidden without a valid `api_key`.
 
 For example, to view the project with ID=1 as XML, using an example API key, the complete URL would be:
 
 ```
-https://www.openhub.net/projects/1.xml?api_key=01234567890123456789
+https://www.openhub.net/p/1.xml?api_key=01234567890123456789
 ```
 
 For the sake of brevity, the `api_key` parameter will be omitted from the examples in this documentation. Remember to always include it in your actual queries.
 
-Note that the Ohloh API previously required the use of a version parameter `v`. This is no longer required, and will be ignored.
+Note that the Open Hub API previously required the use of a version parameter `v`. This is no longer required, and will be ignored.
 
 ## XML Response Format
 
@@ -137,7 +137,7 @@ A sample response to a project request might be:
 </response>
 ```
 
-All XML returned from the Ohloh API will be contained within a root element called `<response>`, which will always contain a `<status>` element.
+All XML returned from the Open Hub API will be contained within a root element called `<response>`, which will always contain a `<status>` element.
 
 The `<status>` element will contain either `success` or `failed`.
 
@@ -153,7 +153,7 @@ If the `status` is `failed`, then the HTTP response code will be set appropriate
 </response>
 ```
 
-Details about this project response can be found in the Ohloh API Reference [project page](reference/project.md).
+Details about this project response can be found in the Open Hub API Reference [project page](reference/project.md).
 
 ## Collection Requests
 
@@ -161,12 +161,12 @@ Details about this project response can be found in the Ohloh API Reference [pro
 
 + __query__ - Results will be filtered by the provided string. Only items that contain the query string in their names or descriptions will be returned. Filtering is case insenstive. Only alphanumeric characters are accepted. All non-alphanumeric characters will be replaced by spaces. Filtering is not available on all API methods, and the searched text depends on the type of object requested. Check the reference documentation for specifics.
 + __sort__ - Controls the sort order of the returned results. Typical supported values are name, created_at, and updated_at. The specific sort options available depend on the type of object requested, so check to the reference documentation for specifics. _API does not support reverse sorting_.
-+ __page__ - In most cases, the Ohloh API returns at most 25 items per request. Pass this parameter to request subsequent items beyond the first page. This parameter is _one-based_, with a default value of 1. If you pass a value outside the range of available pages, you will receive the first page.
++ __page__ - In most cases, the Open Hub API returns at most 25 items per request. Pass this parameter to request subsequent items beyond the first page. This parameter is _one-based_, with a default value of 1. If you pass a value outside the range of available pages, you will receive the first page.
 
 For example, to get the second page of projects containing “java” or “Java” in their titles, descriptions, or tags, you would request:
 
 ```
-GET https://www.openhub.net/projects.xml?query=java&page=2
+GET https://www.openhub.net/p.xml?query=java&page=2
 ```
 
 ### Collection Response XML Format
@@ -177,7 +177,7 @@ Some results will contain a collection of values. When this happens, the `<respo
 + __items_available__ - The total number of database items matching the query, including those already returned.
 + __first_item_position__ - The zero-based index of the first item returned
 
-For example, the response to `https://www.openhub.net/projects.xml` might begin:
+For example, the response to `https://www.openhub.net/p.xml` might begin:
 
 ```xml
 <response>
@@ -193,4 +193,4 @@ For example, the response to `https://www.openhub.net/projects.xml` might begin:
 ```
 
 - - -
-Copyright 202 Synopsys, Inc. Unless otherwise marked, this work is licensed under a [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/).
+Copyright 2025 Black Duck Software, Inc. Unless otherwise marked, this work is licensed under a [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/).

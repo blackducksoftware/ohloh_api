@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="8,00"
-	Name="OhlohApiExample"
+	Name="OpenHubApiExample"
 	ProjectGUID="{EA66C001-B006-4DBA-9542-A5E887BA420C}"
-	RootNamespace="OhlohApiExample"
+	RootNamespace="OpenHubApiExample"
 	Keyword="Win32Proj"
 	>
 	<Platforms>

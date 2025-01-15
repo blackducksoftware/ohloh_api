@@ -1,13 +1,13 @@
 ## Kudo
-A Kudo is a simple gesture of thanks, praise, or endorsement from an Ohloh [account](/reference/account.md) to another person. An account may send Kudos to as many people as desired.
+A Kudo is a simple gesture of thanks, praise, or endorsement from an Open Hub [account](/reference/account.md) to another person. An account may send Kudos to as many people as desired.
 
-Kudos can be sent directly to another Ohloh account, or they may be sent to a contributor on a Project who does not have an Ohloh account. This flexibility makes Kudo records slightly complex.
+Kudos can be sent directly to another Open Hub account, or they may be sent to a contributor on a Project who does not have an Open Hub account. This flexibility makes Kudo records slightly complex.
 
-When a Kudo is sent directly to an Ohloh Account, the recipient is identified by `receiver_account_id`.
+When a Kudo is sent directly to an Open Hub Account, the recipient is identified by `receiver_account_id`.
 
 When a Kudo is sent to a contributor on a Project who does not have an Account, the Kudo record contains both `contributor_id` and `project_id`, which together uniquely identify the recipient.
 
-Ocassionally, an Ohloh Account holder may claim to be a Project contributor who has some existing Kudos. When this happens, the existing Kudos become linked to the Account, and the Kudos will now have all three properties: `receiver_account_id`, `contributor_id`, and `project_id`.
+Ocassionally, an Open Hub Account holder may claim to be a Project contributor who has some existing Kudos. When this happens, the existing Kudos become linked to the Account, and the Kudos will now have all three properties: `receiver_account_id`, `contributor_id`, and `project_id`.
 
 ### Properties
 + __created_at__

@@ -5,8 +5,8 @@ An organization is an entity which contains a collection of projects and account
 ### Properties
 + __name__ Organization Name
 + __url__  XML API URL for the organization.
-+ __html_url__ The URL for the organization page on OpenHub.
-+ __created_at__ The time at which the organization was initially added to OpenHub.
++ __html_url__ The URL for the organization page on Open Hub.
++ __created_at__ The time at which the organization was initially added to Open Hub.
 + __updated_at__ The time of most recent modification to the organization record.
 + __description__ The optional description of the organization, currently limited to 800 characters.
 + __homepage_url__ An optional URL for the home page of the organization, e.g Apache Software Foundation (www.apache.org)
