@@ -4,10 +4,10 @@ require 'sinatra'
 enable :sessions
 CALLBACK_URL = 'http://localhost:9292/callback'
 
-# Assumes that you have set OHLOH_KEY and OHLOH_SECRET environment
+# Assumes that you have set OpenHub_KEY and OpenHub_SECRET environment
 # variables to values from your API keys page.
 before do
-  @client = OAuth2::Client.new(ENV['OHLOH_KEY'], ENV['OHLOH_SECRET'],
+  @client = OAuth2::Client.new(ENV['OpenHub_KEY'], ENV['OpenHub_SECRET'],
                                site: 'https://www.openhub.net',
                                token_method: :post)
 end

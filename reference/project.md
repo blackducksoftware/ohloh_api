@@ -1,13 +1,13 @@
-## Project
+## ProjectH
 A Project represents a collection of source code, documentation, and web sites treated together as a unit. It’s what most people might call an ‘application’ or ‘library’.
 
 ### Properties
 + __id__
     The unique ID for the Project.
 + __name__
-    The project name. Currently limited to 40 characters, and must be unique on Ohloh.
+    The project name. Currently limited to 40 characters, and must be unique on Open Hub.
 + __created_at__
-    The time at which this Project was initially added to the Ohloh database.
+    The time at which this Project was initially added to the Open Hub database.
 + __updated_at__
     The time of the most recent modification of this Project record.
 + __description__
@@ -16,10 +16,8 @@ A Project represents a collection of source code, documentation, and web sites t
     An optional URL to the project home page.
 + __download_url__
     An optional URL to a website hosting project downloads.
-+ __url_name__
-    *Depricated* A short, unique name for this project. This name is used in Ohloh URLs.  *This field will be removed in a future release*
 + __vanity_name__
-    A short, unique name for this project.  This name is used in Ohloh project URLs.
+    A short, unique name for this project.  This name is used in Open Hub project URLs.
 + __medium_logo_url__
     An url to the project’s 64×64 pixels logo image.
 + __small_logo_url__
@@ -39,7 +37,7 @@ A Project represents a collection of source code, documentation, and web sites t
 + __url__
     The xml api url for the current Project.
 + __html_url__
-    The url to the current Projects details page on Ohloh.
+    The url to the current Projects details page on Open Hub.
 + __factoids__
     The factoids for the current analysis of the project will be included under this node.
 
@@ -68,11 +66,11 @@ A Project represents a collection of source code, documentation, and web sites t
     - __@graph_url__
     This is the url to the PNG image that depicts the language breakdown for the current Analysis. The colors referenced in each languages @color attribute will be used in this image.
     - __language__
-    Not every language will have a entry. Ohloh will will combine languages that do not make up a significant percentage into a aggregate entry “N Other”. This entry can be identified by either its @color, always “000000″ or @id, always “”.
+    Not every language will have a entry. Open Hub will combine languages that do not make up a significant percentage into a aggregate entry “N Other”. This entry can be identified by either its @color, always “000000″ or @id, always “”.
     Each language will contain the following data
-        - @color The color code that Ohloh uses to represent this language on the website. This color is also used in the language breakdown graph image.
+        - @color The color code that Open Hub uses to represent this language on the website. This color is also used in the language breakdown graph image.
         - @percentage The percentage of lines of code that the current language represents in the current Analysis
-        - @id The Ohloh language id.
+        - @id The Open Hub language id.
 
 ```xml
 <languages graph_url="https://openhub.net/p/firefox/analyses/9239902/languages.png">
@@ -83,18 +81,37 @@ A Project represents a collection of source code, documentation, and web sites t
 </languages>
 ```
 
++ __similar_projects__
+    The similar projects with regards to the tags will be included under this node.
+    - __id__
+    The unique ID for the Project.
+    - __name__
+    Full Name of the project
+    - __vanity_url__
+    A short, unique name for this project.  This name is used in openhub project URLs.
+
+```xml
+  <similar_projects>
+    <project>
+      <id>1</id>
+      <name>Ruby</name>
+      <vanity_url>ruby</vanity_url>
+    </project>
+  </similar_projects>
+```
+
 + __licenses__
     The Licenses for the current project will be included under this node.
     - __name__
     Full Name of the License
-    - __nice_name__
+    - __vanity_url__
     A human-friendly name of the License
 
 ```xml
   <licenses>
     <license>
       <name>mit</name>
-      <nice_name>MIT License</nice_name>
+      <vanity_url>MIT License</vanity_url>
     </license>
   </licenses>
 ```
@@ -124,7 +141,7 @@ A Project represents a collection of source code, documentation, and web sites t
 + __links__
     The links associated with the current project. Homepage and Download links are not included here.
     - __category__
-    Link category on Ohloh
+    Link category on Open Hub
     - __title__
     - __url__
 
@@ -142,13 +159,13 @@ A Project represents a collection of source code, documentation, and web sites t
 ### URL
 To get a single Project, including its current best Analysis:
 ```shell
-curl https://www.openhub.net/projects/{project_id}.xml 
+curl https://www.openhub.net/p/{project_id}.xml 
 ```
 
 ### Collection URL
 To get a list of all Projects, not including their Analyses:
 ```shell
-curl https://www.openhub.net/projects.xml 
+curl https://www.openhub.net/p.xml 
 ```
 The Project collection request supports the standard [collection request parameters](/README.md#collection-requests), with the following details:
 

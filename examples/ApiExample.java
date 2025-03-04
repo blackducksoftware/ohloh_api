@@ -21,16 +21,16 @@
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
 
-    This is an example of using the Ohloh API from Java.
-    Detailed information can be found at the Ohloh website:
+    This is an example of using the Open Hub API from Java.
+    Detailed information can be found at the Open Hub website:
 
-    https://github.com/blackducksw/ohloh_api
+    https://github.com/blackducksoftware/ohloh_api
 
     This examples retrieves a account and simply shows the name associated.
 
-    Pass your Ohloh API key as the first parameter to this example.
-    Ohloh API keys are free. If you do not have one, you can obtain one
-    at the Ohloh website:
+    Pass your Open Hub API key as the first parameter to this example.
+    Open Hub API keys are free. If you do not have one, you can obtain one
+    at the Open Hub website:
 
      https://www.openhub.net/accounts/<your_login>/api_keys/new
 

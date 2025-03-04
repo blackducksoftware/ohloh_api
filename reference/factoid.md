@@ -2,9 +2,9 @@
 
 A Factoid is a short, high-level bullet point delivering a simple observation about a [Project](/reference/project.md). Factoids are derived from an Analysis, and new Factoids are created for a Project every time a new [Analysis](/reference/analysis.md) is created.
 
-On the Ohloh web site, Factoids are rendered in the Nutshell section of the project summary page. Factoids also are available in several of the sharing widgets available for embedding on websites.
+On the Open Hub web site, Factoids are rendered in the Nutshell section of the project summary page. Factoids also are available in several of the sharing widgets available for embedding on websites.
 
-A Project has factoids only if Ohloh has downloaded and analyzed its source code.
+A Project has factoids only if Open Hub has downloaded and analyzed its source code.
 
 ### Properties
 + __id__
@@ -17,21 +17,15 @@ The unique ID of the [analysis](/reference/analysis.md) used to calculate this f
 The Factoid type. The possible types are defined below.
 
 + __description__
-A short, human-readable description. This is the bullet point text which appears on the Ohloh project page.
+A short, human-readable description. This is the bullet point text which appears on the Open Hub project page.
 
 + __severity__
-An integer from -3 to +3 which rates the relative severity of the factoid. Negative numbers generally indicate bad news, positive numbers generally indicate good news. Ohloh uses these numbers to select icons to display beside the factoids. All factoids of the same type have the save severity.
-
-### URL
-To get a single Factoid:
-```shell
-curl https://www.openhub.net/projects/{project_id}/factoids/{factoid_id}.xml
-```
+An integer from -3 to +3 which rates the relative severity of the factoid. Negative numbers generally indicate bad news, positive numbers generally indicate good news. Open Hub uses these numbers to select icons to display beside the factoids. All factoids of the same type have the save severity.
 
 ### Collection URL
 To get a list of all current Factoids for a particular Project:
 ```shell
-curl https://www.openhub.net/projects/{project_id}/factoids.xml 
+curl https://www.openhub.net/p/{project_id}/factoids.xml 
 ```
 The collection request does not support any filtering, sorting or paging. You will always receive the entire collection of factoids, ordered by descending priority.
 
