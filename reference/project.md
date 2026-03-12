@@ -1,4 +1,4 @@
-## ProjectH
+## Project
 A Project represents a collection of source code, documentation, and web sites treated together as a unit. It’s what most people might call an ‘application’ or ‘library’.
 
 ### Properties
@@ -48,6 +48,18 @@ A Project represents a collection of source code, documentation, and web sites t
   <factoid type="FactoidActivityIncreasing">Increasing year-over-year development activity</factoid>
   <factoid type="FactoidCommentsLow">Few source code comments</factoid>
 </factoids>
+```
+
++ __organization__
+    The organization for the current project will be included under this node.
+
+```xml
+<organization>
+<id>1</id>
+<name>org_name</name>
+<vanity_url>org_vanity_url</vanity_url>
+<html_url>org_url</html_url>
+</organization>
 ```
 
 + __tags__
